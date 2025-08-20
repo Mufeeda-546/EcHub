@@ -1,7 +1,37 @@
 {
-   "users":[
+  "users": [
     {
-
+      "id": "08b5"
+    },
+    {
+      "id": "4b6c",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "05ac",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "8795",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "6f62",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2cff",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
     }
-   ] 
+  ]
 }

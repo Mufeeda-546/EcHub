@@ -1,6 +1,9 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
 
+* {
+  font-family: 'Outfit';
+}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -69,6 +72,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-* {
-  font-family: 'Outfit';
-}
