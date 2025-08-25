@@ -24,8 +24,8 @@ const App = () => {
           element={
             <Home
               wishlist={wishlist}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
+              // searchQuery={searchQuery}
+              // setSearchQuery={setSearchQuery}
             />
           }
         />
