@@ -19,6 +19,7 @@ const Home = () => {
       <Herosection
       //  searchQuery={searchQuery}
         /> 
+       
         <FooterSection/>
     </div>
   )
