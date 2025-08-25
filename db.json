@@ -1,648 +1,747 @@
 {
   "users": [
     {
-      "id": "08b5"
+      "id": "6dbf",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "qw123"
     },
     {
-      "id": "4b6c",
+      "id": "2ee3",
       "name": "Mufeeda",
       "email": "mufiaashi546@gmail.com",
       "password": "123"
     },
     {
-      "id": "05ac",
+      "id": "b7e0",
       "name": "Mufeeda",
       "email": "mufiaashi546@gmail.com",
       "password": "123"
     },
     {
-      "id": "8795",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
+      "id": "4efe",
+      "name": "mufeeda",
+      "email": "hashmadappally@gmail.com",
+      "password": "1234"
     },
     {
-      "id": "6f62",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "2cff",
+      "id": "5c51",
       "name": "Mufeeda",
       "email": "mufiaashi546@gmail.com",
       "password": "123"
     }
   ],
-
-  "products":[
+  "products": [
     {
-      "id":1,
-      "name":"Bamboo toothbrush",
-      "price":129,
-      "currency":"INR",
-      "image":"public/toothbrush.png",
-      "category":"Personal Care",
-      "stock":1,
-      "description":"Biodegradable bamboo handle with plant-based bristles.",
-     "material":["bamboo","Plant-based nylon"],
-     "ecoscore":86
-
-    },{
-      "id":2,
-      "name":"refillable Deodrant Stick",
-      "price":299,
-      "currency":"INR",
-      "image":"public/refillable deodrant stick.png",
-      "category":"Personal Care",
-      "description":"Aluminium case,refillable core for zero waste",
-     "stock":1,
-     "material":["Aluminium","Organic Oils"],
-     "ecoscore":92
-
-    },{
-      "id":3,
-      "name":"Organic Cotton Face Towels",
-      "price":399,
-      "currency":"INR",
-      "image":"public/cotton face towel.png",
-      "category":"Personal Care",
-      "description":"Soft,durable,GOTS certified organic cotton towels.",
-     "stock":1,
-     "material":["Organic Cotton"],
-     "ecoscore":89
-
-    },{
-      "id":4,
-      "name":"Herbal Shampoo Brush",
-      "price":249,
-      "currency":"INR",
-      "image":"public/herbal shampoobrush.png",
-      "category":"Personal Care",
-      "description":"Plastic Free shampoo bar with natural herbs.",
-     "stock":1,
-     "material":["Neem","Aloe Vera","Coconut Oil"],
-     "ecoscore":93
-
-    },{
-      "id":5,
-      "name":"Natural Loofah",
-      "price":99,
-      "currency":"INR",
-      "image":"public/loofah.png",
-      "category":"Personal Care",
-      "description":"Made from dried gourd,100% compostable",
-     "stock":1,
-     "material":["Plant Fiber"],
-     "ecoscore":85
-
-    },{
-      "id":6,
-      "name":"Eco-friendly Cotton Earbuds",
-      "price":59,
-      "currency":"INR",
-      "image":"public/eco-friendly earbuds.png",
-      "category":"Personal Care",
-      "description":"Paper stick with organic cotton tips,fully biodegradable.",
-     "stock":1,
-     "material":["Paper","Cotton"],
-     "ecoscore":87
-
-    },{
-      "id":7,
-      "name":"Organic Lip Balm ",
-      "price":149,
-      "currency":"INR",
-      "image":"public/organic lip blam.png",
-      "category":"Personal Care",
-      "description":"Moisturizing balm in compostable paper tube",
-     "stock":1,
-     "material":["Beeswax","Shea Butter","Essential Oils"],
-     "ecoscore":90
-
+      "id": "1",
+      "name": "Bamboo toothbrush",
+      "price": 129,
+      "currency": "INR",
+      "image": "/toothbrush.png",
+      "category": "Personal Care",
+      "stock": 1,
+      "description": "Biodegradable bamboo handle with plant-based bristles.",
+      "material": [
+        "bamboo",
+        "Plant-based nylon"
+      ],
+      "ecoscore": 86
     },
-     {
-      "id": 8,
+    {
+      "id": "2",
+      "name": "Refillable Deodrant Stick",
+      "price": 299,
+      "currency": "INR",
+      "image": "/refillabledeodrantstick.png",
+      "category": "Personal Care",
+      "description": "Aluminium case,refillable core for zero waste",
+      "stock": 1,
+      "material": [
+        "Aluminium",
+        "Organic Oils"
+      ],
+      "ecoscore": 92
+    },
+    {
+      "id": "3",
+      "name": "Organic Cotton Face Towels",
+      "price": 399,
+      "currency": "INR",
+      "image": "/cottonfacetowel.png",
+      "category": "Personal Care",
+      "description": "Soft,durable,GOTS certified organic cotton towels.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton"
+      ],
+      "ecoscore": 89
+    },
+    {
+      "id": "4",
+      "name": "Herbal Shampoo Brush",
+      "price": 249,
+      "currency": "INR",
+      "image": "/herbalshampoobrush.png",
+      "category": "Personal Care",
+      "description": "Plastic Free shampoo bar with natural herbs.",
+      "stock": 1,
+      "material": [
+        "Neem",
+        "Aloe Vera",
+        "Coconut Oil"
+      ],
+      "ecoscore": 93
+    },
+    {
+      "id": "5",
+      "name": "Natural Loofah",
+      "price": 99,
+      "currency": "INR",
+      "image": "/loofah.png",
+      "category": "Personal Care",
+      "description": "Made from dried gourd,100% compostable",
+      "stock": 1,
+      "material": [
+        "Plant Fiber"
+      ],
+      "ecoscore": 85
+    },
+    {
+      "id": "6",
+      "name": "Eco-friendly Cotton Earbuds",
+      "price": 59,
+      "currency": "INR",
+      "image": "/eco-friendlyearbuds.png",
+      "category": "Personal Care",
+      "description": "Paper stick with organic cotton tips,fully biodegradable.",
+      "stock": 1,
+      "material": [
+        "Paper",
+        "Cotton"
+      ],
+      "ecoscore": 87
+    },
+    {
+      "id": "7",
+      "name": "Organic Lip Balm ",
+      "price": 149,
+      "currency": "INR",
+      "image": "/organiclipblam.png",
+      "category": "Personal Care",
+      "description": "Moisturizing balm in compostable paper tube",
+      "stock": 1,
+      "material": [
+        "Beeswax",
+        "Shea Butter",
+        "Essential Oils"
+      ],
+      "ecoscore": 90
+    },
+    {
+      "id": "8",
       "name": "Reusable Makeup Remover Pads",
       "price": 199,
       "currency": "INR",
-      "images": "public/makeupremov pads.png",
+      "image": "/makeuprmovablepads.webp",
       "category": "Personal Care",
       "description": "Washable organic cotton pads for makeup removal.",
       "stock": 1,
-      "materials": ["Organic Cotton"],
+      "materials": [
+        "Organic Cotton"
+      ],
       "ecoScore": 88
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Plant-Based Dental Floss",
       "price": 179,
       "currency": "INR",
-      "images": "public/dentalfloss.png",
+      "image": "/dentalfloss.jpg",
       "category": "Personal Care",
       "description": "Corn fiber dental floss in reusable glass jar.",
       "stock": 1,
-      "materials": ["Corn Fiber", "Glass"],
+      "materials": [
+        "Corn Fiber",
+        "Glass"
+      ],
       "ecoScore": 91
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Aloe Vera Gel",
       "price": 229,
       "currency": "INR",
-      "images": "public/aloevera.gel.jpg",
+      "image": "/aloeveraagel.jpg",
       "category": "Personal Care",
       "description": "Pure aloe vera gel packed in a recyclable container.",
       "stock": 1,
-      "materials": ["Aloe Vera"],
+      "materials": [
+        "Aloe Vera"
+      ],
       "ecoScore": 94
     },
-    
-  {
-    "id": 11,
-    "name": "Reusable Bamboo Kitchen Towels",
-    "price": 349,
-    "currency": "INR",
-    "images": "public/kitchen towell.png",
-    "category": "Home Essentials",
-    "description": "Washable bamboo fiber towels that replace paper towels.",
-    "stock": 1,
-    "material": ["Bamboo Fiber"],
-    "ecoScore": 92
-  },
-  {
-    "id": 12,
-    "name": "Organic Cotton Bedsheet",
-    "price": 1299,
-    "currency": "INR",
-    "images": "public/organic bedsheet.png",
-    "category": "Home Essentials",
-    "description": "Soft breathable bedsheet made from 100% organic cotton.",
-    "stock": 1,
-    "material": ["Organic Cotton"],
-    "ecoScore": 89
-  },
-  {
-    "id": 13,
-    "name": "Recycled Glass Vase",
-    "price": 499,
-    "currency": "INR",
-    "images": "public/recycled glassvessels.png",
-    "category": "Home Essentials",
-    "description": "Stylish vase crafted from recycled glass bottles.",
-    "stock": 1,
-    "material": ["Recycled Glass"],
-    "ecoScore": 90
-  },
-  {
-    "id": 14,
-    "name": "Bamboo Laundry Basket",
-    "price": 799,
-    "currency": "INR",
-    "images": "public/Eco-Friendly-Bamboo-Laundry.png",
-    "category": "Home Essentials",
-    "description": "Durable and eco-friendly laundry basket made from bamboo.",
-    "stock": 1,
-    "material": ["Bamboo"],
-    "ecoScore": 87
-  },
-  {
-    "id": 15,
-    "name": "Coconut Coir Doormat",
-    "price": 299,
-    "currency": "INR",
-    "images": "public/dormat.png",
-    "category": "Home Essentials",
-    "description": "Eco-friendly doormat made with natural coconut coir.",
-    "stock": 1,
-    "material": ["Coconut Coir"],
-    "ecoScore": 85
-  },
-  {
-    "id": 16,
-    "name": "Solar-Powered Night Lamp",
-    "price": 699,
-    "currency": "INR",
-    "images": "public/solar night.png",
-    "category": "Home Essentials",
-    "description": "Compact solar lamp that saves energy and adds decor.",
-    "stock": 1,
-    "material": ["Plastic", "Solar Panel"],
-    "ecoScore": 94
-  },
-  {
-    "id": 17,
-    "name": "Biodegradable Trash Bags",
-    "price": 199,
-    "currency": "INR",
-    "images": "public/trash bag.png",
-    "category": "Home Essentials",
-    "description": "Compostable garbage bags that decompose naturally.",
-    "stock": 1,
-    "material": ["Corn Starch"],
-    "ecoScore": 91
-  },
-  {
-    "id": 18,
-    "name": "Recycled Paper Notebooks",
-    "price": 149,
-    "currency": "INR",
-    "images": "public/ECO-notebooks.png",
-    "category": "Home Essentials",
-    "description": "Notebooks made from 100% recycled paper.",
-    "stock": 1,
-    "material": ["Recycled Paper"],
-    "ecoScore": 88
-  },
-  {
-    "id": 19,
-    "name": "Clay Water Pot",
-    "price": 399,
-    "currency": "INR",
-    "images": "public/clay water pots.png",
-    "category": "Home Essentials",
-    "description": "Traditional clay pot that naturally cools drinking water.",
-    "stock": 1,
-    "material": ["Clay"],
-    "ecoScore": 95
-  },
-  {
-    "id": 20,
-    "name": "Eco-Friendly Storage Box",
-    "price": 599,
-    "currency": "INR",
-    "images": "public/StorageBoxe.png",
-    "category": "Home Essentials",
-    "description": "Reusable and biodegradable storage box made from jute fiber.",
-    "stock": 1,
-    "material": ["Jute Fiber"],
-    "ecoScore": 89
-  }
-
-,
-  {
-    "id": 21,
-    "name": "Bamboo Cutlery Set",
-    "price": 249,
-    "currency": "INR",
-    "images": "public/BambooCutlerySet.png",
-    "category": "Kitchen Essentials",
-    "description": "Reusable bamboo fork, spoon, knife and chopsticks in a pouch.",
-    "stock": 1,
-    "material": ["Bamboo"],
-    "ecoScore": 93
-  },
-  {
-    "id": 22,
-    "name": "Steel Water Bottle",
-    "price": 499,
-    "currency": "INR",
-    "images": "public/Stainless-Steel-Water-Bottle.png",
-    "category": "Kitchen Essentials",
-    "description": "Durable stainless steel bottle that replaces single-use plastic.",
-    "stock": 1,
-    "material": ["Stainless Steel"],
-    "ecoScore": 92
-  },
-  {
-    "id": 23,
-    "name": "Compostable Food Wrap",
-    "price": 299,
-    "currency": "INR",
-    "images": [],
-    "category": "Kitchen Essentials",
-    "description": "Beeswax-coated wrap to store food without plastic.",
-    "stock": 1,
-    "material": ["Organic Cotton", "Beeswax"],
-    "ecoScore": 90
-  },
-  {
-    "id": 24,
-    "name": "Recycled Glass Jar Set",
-    "price": 599,
-    "currency": "INR",
-    "images": "public/recycled glassjars.png",
-    "category": "Kitchen Essentials",
-    "description": "Airtight storage jars made from recycled glass.",
-    "stock": 1,
-    "material": ["Recycled Glass"],
-    "ecoScore": 88
-  },
-  {
-    "id": 25,
-    "name": "Coconut Shell Bowl",
-    "price": 199,
-    "currency": "INR",
-    "images": "public/eco-friendly-coconut-shell.png",
-    "category": "Kitchen Essentials",
-    "description": "Polished bowl handcrafted from coconut shells.",
-    "stock": 1,
-    "material": ["Coconut Shell"],
-    "ecoScore": 94
-  },
-  {
-    "id": 26,
-    "name": "Bamboo Chopping Board",
-    "price": 349,
-    "currency": "INR",
-    "images": "public/chopping board.png",
-    "category": "Kitchen Essentials",
-    "description": "Eco-friendly cutting board made from strong bamboo.",
-    "stock": 1,
-    "material": ["Bamboo"],
-    "ecoScore": 89
-  },
-  {
-    "id": 27,
-    "name": "Clay Cooking Pot",
-    "price": 699,
-    "currency": "INR",
-    "images": "public/clay pot.png",
-    "category": "Kitchen Essentials",
-    "description": "Traditional clay pot for natural and healthy cooking.",
-    "stock": 1,
-    "material": ["Clay"],
-    "ecoScore": 96
-  },
-  {
-    "id": 28,
-    "name": "Organic Cotton Kitchen Towels",
-    "price": 249,
-    "currency": "INR",
-    "images": "public/kitchen towel.png",
-    "category": "Kitchen Essentials",
-    "description": "Reusable kitchen towels made from 100% organic cotton.",
-    "stock": 1,
-    "material": ["Organic Cotton"],
-    "ecoScore": 91
-  },
-  {
-    "id": 29,
-    "name": "Recycled Steel Lunch Box",
-    "price": 799,
-    "currency": "INR",
-    "images": "public/steellunchbox.png",
-    "category": "Kitchen Essentials",
-    "description": "Durable steel lunchbox crafted from recycled materials.",
-    "stock": 1,
-    "material": ["Recycled Steel"],
-    "ecoScore": 90
-  },
-  {
-    "id": 30,
-    "name": "Jute Grocery Bag",
-    "price": 149,
-    "currency": "INR",
-    "images": "public/jute grocery bag.png",
-    "category": "Kitchen Essentials",
-    "description": "Reusable grocery bag made from strong jute fiber.",
-    "stock": 1,
-    "material": ["Jute"],
-    "ecoScore": 92
-  }
-
-,
-    
-  {
-    "id": 31,
-    "name": "Organic Cotton T-Shirt",
-    "price": 699,
-    "currency": "INR",
-    "images": "public/cotton tshirt.png",
-    "category": "Fashion & Accessories",
-    "description": "Soft and breathable T-shirt made from 100% organic cotton.",
-    "stock": 1,
-    "material": ["Organic Cotton"],
-    "ecoScore": 92
-  },
-  {
-    "id": 32,
-    "name": "Hemp Backpack",
-    "price": 1499,
-    "currency": "INR",
-    "images": "public/hemp backpack.png",
-    "category": "Fashion & Accessories",
-    "description": "Durable eco-friendly backpack made from natural hemp fiber.",
-    "stock": 1,
-    "material": ["Hemp"],
-    "ecoScore": 95
-  },
-  {
-    "id": 33,
-    "name": "Recycled Polyester Jacket",
-    "price": 2499,
-    "currency": "INR",
-    "images": "public/recycled polyster jacket.png",
-    "category": "Fashion & Accessories",
-    "description": "Lightweight jacket made from recycled polyester materials.",
-    "stock": 1,
-    "material": ["Recycled Polyester"],
-    "ecoScore": 88
-  },
-  {
-    "id": 34,
-    "name": "Jute Handbag",
-    "price": 999,
-    "currency": "INR",
-    "images": "public/jute handbag.png",
-    "category": "Fashion & Accessories",
-    "description": "Stylish handbag crafted from natural jute fibers.",
-    "stock": 1,
-    "material": ["Jute"],
-    "ecoScore": 93
-  },
-  {
-    "id": 35,
-    "name": "Cork Wallet",
-    "price": 499,
-    "currency": "INR",
-    "images": "public/cork wallet.png",
-    "category": "Fashion & Accessories",
-    "description": "Vegan-friendly wallet made from renewable cork material.",
-    "stock": 1,
-    "material": ["Cork"],
-    "ecoScore": 94
-  },
-  {
-    "id": 36,
-    "name": "Organic Cotton Scarf",
-    "price": 399,
-    "currency": "INR",
-    "images": "public/oganic scarf.png",
-    "category": "Fashion & Accessories",
-    "description": "Lightweight scarf woven from organic cotton fibers.",
-    "stock": 1,
-    "material": ["Organic Cotton"],
-    "ecoScore": 91
-  },
-  {
-    "id": 37,
-    "name": "Recycled Rubber Sandals",
-    "price": 599,
-    "currency": "INR",
-    "images": "public/rubber sandals.png",
-    "category": "Fashion & Accessories",
-    "description": "Comfortable sandals made from recycled rubber.",
-    "stock": 1,
-    "material": ["Recycled Rubber"],
-    "ecoScore": 90
-  },
-  {
-    "id": 38,
-    "name": "Bamboo Sunglasses",
-    "price": 899,
-    "currency": "INR",
-    "images": "public/bamboo sunglasses.png",
-    "category": "Fashion & Accessories",
-    "description": "Trendy sunglasses with frames made from bamboo.",
-    "stock": 1,
-    "material": ["Bamboo"],
-    "ecoScore": 92
-  },
-  {
-    "id": 39,
-    "name": "Hemp Hat",
-    "price": 449,
-    "currency": "INR",
-    "images":"public/hemp.hat.png",
-    "category": "Fashion & Accessories",
-    "description": "Breathable summer hat made from eco-friendly hemp fibers.",
-    "stock": 1,
-    "material": ["Hemp"],
-    "ecoScore": 93
-  },
-  {
-    "id": 40,
-    "name": "Upcycled Denim Tote",
-    "price": 799,
-    "currency": "INR",
-    "images": "public/denim tote bag.png",
-    "category": "Fashion & Accessories",
-    "description": "Reusable tote bag made from upcycled denim fabric.",
-    "stock": 1,
-    "material": ["Upcycled Denim"],
-    "ecoScore": 89
-  },
-    
-  {
-    "id": 41,
-    "name": "Bamboo Travel Mug",
-    "price": 499,
-    "currency": "INR",
-    "images": "public/travel mug.png",
-    "category": "Travel & Outdoor",
-    "description": "Reusable bamboo travel mug with spill-proof lid.",
-    "stock": 1,
-    "material": ["Bamboo"],
-    "ecoScore": 93
-  },
-  {
-    "id": 42,
-    "name": "Solar-Powered Lantern",
-    "price": 1299,
-    "currency": "INR",
-    "images": [],
-    "category": "Travel & Outdoor",
-    "description": "Portable lantern powered by solar energy, perfect for camping.",
-    "stock": 1,
-    "material": ["Recycled Plastic", "Solar Panel"],
-    "ecoScore": 95
-  },
-  {
-    "id": 43,
-    "name": "Hemp Travel Pouch",
-    "price": 349,
-    "currency": "INR",
-    "images": "public/travelpurse.png",
-    "category": "Travel & Outdoor",
-    "description": "Compact and eco-friendly pouch made from hemp fabric.",
-    "stock": 1,
-    "material": ["Hemp"],
-    "ecoScore": 92
-  },
-  {
-    "id": 44,
-    "name": "Recycled Nylon Backpack",
-    "price": 1799,
-    "currency": "INR",
-    "images": "public/nylon backpack.png",
-    "category": "Travel & Outdoor",
-    "description": "Durable and lightweight backpack made from recycled nylon.",
-    "stock": 1,
-    "material": ["Recycled Nylon"],
-    "ecoScore": 90
-  },
-  {
-    "id": 45,
-    "name": "Cork Yoga Mat",
-    "price": 1499,
-    "currency": "INR",
-    "images": "public/yogamat.png",
-    "category": "Travel & Outdoor",
-    "description": "Eco-friendly yoga mat made with natural cork surface.",
-    "stock": 1,
-    "material": ["Cork"],
-    "ecoScore": 94
-  },
-   {
-    "id": 46,
-    "name": "Bamboo Toothbrush Travel Kit",
-    "price": 299,
-    "currency": "INR",
-    "images":"public/trave brush kit.png",
-    "category": "Travel & Outdoor",
-    "description": "Compact travel kit with bamboo toothbrush and case.",
-    "stock": 1,
-    "material": ["Bamboo"],
-    "ecoScore": 93
-  },
-  {
-    "id": 47,
-    "name": "Recycled Polyester Sleeping Bag",
-    "price": 2599,
-    "currency": "INR",
-    "images": "public/trekking-sleeping-bag.png",
-    "category": "Travel & Outdoor",
-    "description": "Lightweight sleeping bag made with recycled polyester.",
-    "stock": 1,
-    "material": ["Recycled Polyester"],
-    "ecoScore": 89
-  },
-  {
-    "id": 48,
-    "name": "Stainless Steel Water Bottle",
-    "price": 699,
-    "currency": "INR",
-    "images": "public/steelbottle.png",
-    "category": "Travel & Outdoor",
-    "description": "Durable and reusable stainless steel water bottle.",
-    "stock": 1,
-    "material": ["Stainless Steel"],
-    "ecoScore": 91
-  },
-  {
-    "id": 49,
-    "name": "Organic Cotton Travel Towel",
-    "price": 899,
-    "currency": "INR",
-    "images":"public/organic travel towel.jpg",
-    "category": "Travel & Outdoor",
-    "description": "Quick-dry travel towel made from organic cotton.",
-    "stock": 1,
-    "material": ["Organic Cotton"],
-    "ecoScore": 92
-  },
-  {
-    "id": 50,
-    "name": "Upcycled Tent Bag",
-    "price": 1199,
-    "currency": "INR",
-    "images": "public/tentbag.png",
-    "category": "Travel & Outdoor",
-    "description": "Multipurpose travel bag made from upcycled tent fabric.",
-    "stock": 1,
-    "material": ["Upcycled Fabric"],
-    "ecoScore": 90
-  }
+    {
+      "id": "11",
+      "name": "Reusable Bamboo Kitchen Towels",
+      "price": 349,
+      "currency": "INR",
+      "image": "/kitchentowel.jpg",
+      "category": "Home Essentials",
+      "description": "Washable bamboo fiber towels that replace paper towels.",
+      "stock": 1,
+      "material": [
+        "Bamboo Fiber"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "12",
+      "name": "Organic Cotton Bedsheet",
+      "price": 1299,
+      "currency": "INR",
+      "image": "/organiccottonbedsheets.webp",
+      "category": "Home Essentials",
+      "description": "Soft breathable bedsheet made from 100% organic cotton.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton"
+      ],
+      "ecoScore": 89
+    },
+    {
+      "id": "13",
+      "name": "Recycled Glass Vase",
+      "price": 499,
+      "currency": "INR",
+      "image": "/recycledglassvase.jpg",
+      "category": "Home Essentials",
+      "description": "Stylish vase crafted from recycled glass bottles.",
+      "stock": 1,
+      "material": [
+        "Recycled Glass"
+      ],
+      "ecoScore": 90
+    },
+    {
+      "id": "14",
+      "name": "Bamboo Laundry Basket",
+      "price": 799,
+      "currency": "INR",
+      "image": "/bamboolaudrybasket.webp",
+      "category": "Home Essentials",
+      "description": "Durable and eco-friendly laundry basket made from bamboo.",
+      "stock": 1,
+      "material": [
+        "Bamboo"
+      ],
+      "ecoScore": 87
+    },
+    {
+      "id": "15",
+      "name": "Coconut Coir Doormat",
+      "price": 299,
+      "currency": "INR",
+      "image": "/Coconut Coir Doormat.avif",
+      "category": "Home Essentials",
+      "description": "Eco-friendly doormat made with natural coconut coir.",
+      "stock": 1,
+      "material": [
+        "Coconut Coir"
+      ],
+      "ecoScore": 85
+    },
+    {
+      "id": "16",
+      "name": "Solar-Powered Night Lamp",
+      "price": 699,
+      "currency": "INR",
+      "image": "/solarnight.png",
+      "category": "Home Essentials",
+      "description": "Compact solar lamp that saves energy and adds decor.",
+      "stock": 1,
+      "material": [
+        "Plastic",
+        "Solar Panel"
+      ],
+      "ecoScore": 94
+    },
+    {
+      "id": "17",
+      "name": "Biodegradable Trash Bags",
+      "price": 199,
+      "currency": "INR",
+      "image": "/BiodegradableTrashBags.jpg",
+      "category": "Home Essentials",
+      "description": "Compostable garbage bags that decompose naturally.",
+      "stock": 1,
+      "material": [
+        "Corn Starch"
+      ],
+      "ecoScore": 91
+    },
+    {
+      "id": "18",
+      "name": "Recycled Paper Notebooks",
+      "price": 149,
+      "currency": "INR",
+      "image": "/RecycledPaperNotebooks.jpeg",
+      "category": "Home Essentials",
+      "description": "Notebooks made from 100% recycled paper.",
+      "stock": 1,
+      "material": [
+        "Recycled Paper"
+      ],
+      "ecoScore": 88
+    },
+    {
+      "id": "19",
+      "name": "Clay Water Pot",
+      "price": 399,
+      "currency": "INR",
+      "image": "/ClayWaterPot.jpg",
+      "category": "Home Essentials",
+      "description": "Traditional clay pot that naturally cools drinking water.",
+      "stock": 1,
+      "material": [
+        "Clay"
+      ],
+      "ecoScore": 95
+    },
+    {
+      "id": "20",
+      "name": "Eco-Friendly Storage Box",
+      "price": 599,
+      "currency": "INR",
+      "image": "/Eco-FriendlyStorageBox_.jpg",
+      "category": "Home Essentials",
+      "description": "Reusable and biodegradable storage box made from jute fiber.",
+      "stock": 1,
+      "material": [
+        "Jute Fiber"
+      ],
+      "ecoScore": 89
+    },
+    {
+      "id": "21",
+      "name": "Bamboo Cutlery Set",
+      "price": 249,
+      "currency": "INR",
+      "image": "/BambooCutlerySet.png",
+      "category": "Kitchen Essentials",
+      "description": "Reusable bamboo fork, spoon, knife and chopsticks in a pouch.",
+      "stock": 1,
+      "material": [
+        "Bamboo"
+      ],
+      "ecoScore": 93
+    },
+    {
+      "id": "22",
+      "name": "Steel Water Bottle",
+      "price": 499,
+      "currency": "INR",
+      "image": "/Stainless-Steel-Water-Bottle.png",
+      "category": "Kitchen Essentials",
+      "description": "Durable stainless steel bottle that replaces single-use plastic.",
+      "stock": 1,
+      "material": [
+        "Stainless Steel"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "23",
+      "name": "Compostable Food Wrap",
+      "price": 299,
+      "currency": "INR",
+      "image": "/foodwrap.png",
+      "category": "Kitchen Essentials",
+      "description": "Beeswax-coated wrap to store food without plastic.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton",
+        "Beeswax"
+      ],
+      "ecoScore": 90
+    },
+    {
+      "id": "24",
+      "name": "Recycled Glass Jar Set",
+      "price": 599,
+      "currency": "INR",
+      "image": "/recycledglassjars.png",
+      "category": "Kitchen Essentials",
+      "description": "Airtight storage jars made from recycled glass.",
+      "stock": 1,
+      "material": [
+        "Recycled Glass"
+      ],
+      "ecoScore": 88
+    },
+    {
+      "id": "25",
+      "name": "Coconut Shell Bowl",
+      "price": 199,
+      "currency": "INR",
+      "image": "/eco-friendly-coconut-shell.png",
+      "category": "Kitchen Essentials",
+      "description": "Polished bowl handcrafted from coconut shells.",
+      "stock": 1,
+      "material": [
+        "Coconut Shell"
+      ],
+      "ecoScore": 94
+    },
+    {
+      "id": "26",
+      "name": "Bamboo Chopping Board",
+      "price": 349,
+      "currency": "INR",
+      "image": "/choppingboard.png",
+      "category": "Kitchen Essentials",
+      "description": "Eco-friendly cutting board made from strong bamboo.",
+      "stock": 1,
+      "material": [
+        "Bamboo"
+      ],
+      "ecoScore": 89
+    },
+    {
+      "id": "27",
+      "name": "Clay Cooking Pot",
+      "price": 699,
+      "currency": "INR",
+      "image": "/ClayCookingPot.jpg",
+      "category": "Kitchen Essentials",
+      "description": "Traditional clay pot for natural and healthy cooking.",
+      "stock": 1,
+      "material": [
+        "Clay"
+      ],
+      "ecoScore": 96
+    },
+    {
+      "id": "28",
+      "name": "Organic Cotton Kitchen Towels",
+      "price": 249,
+      "currency": "INR",
+      "image": "/kitchentowel.png",
+      "category": "Kitchen Essentials",
+      "description": "Reusable kitchen towels made from 100% organic cotton.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton"
+      ],
+      "ecoScore": 91
+    },
+    {
+      "id": "29",
+      "name": "Recycled Steel Lunch Box",
+      "price": 799,
+      "currency": "INR",
+      "image": "/steellunchbox.png",
+      "category": "Kitchen Essentials",
+      "description": "Durable steel lunchbox crafted from recycled materials.",
+      "stock": 1,
+      "material": [
+        "Recycled Steel"
+      ],
+      "ecoScore": 90
+    },
+    {
+      "id": "30",
+      "name": "Jute Grocery Bag",
+      "price": 149,
+      "currency": "INR",
+      "image": "/JuteGroceryBag.jpg",
+      "category": "Kitchen Essentials",
+      "description": "Reusable grocery bag made from strong jute fiber.",
+      "stock": 1,
+      "material": [
+        "Jute"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "31",
+      "name": "Organic Cotton T-Shirt",
+      "price": 699,
+      "currency": "INR",
+      "image": "/cottontshirt.png",
+      "category": "Fashion & Accessories",
+      "description": "Soft and breathable T-shirt made from 100% organic cotton.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "32",
+      "name": "Hemp Backpack",
+      "price": 1499,
+      "currency": "INR",
+      "image": "/HempHat.jpg",
+      "category": "Fashion & Accessories",
+      "description": "Durable eco-friendly backpack made from natural hemp fiber.",
+      "stock": 1,
+      "material": [
+        "Hemp"
+      ],
+      "ecoScore": 95
+    },
+    {
+      "id": "33",
+      "name": "Recycled Polyester Jacket",
+      "price": 2499,
+      "currency": "INR",
+      "image": "/recycledpolysterjacket.png",
+      "category": "Fashion & Accessories",
+      "description": "Lightweight jacket made from recycled polyester materials.",
+      "stock": 1,
+      "material": [
+        "Recycled Polyester"
+      ],
+      "ecoScore": 88
+    },
+    {
+      "id": "34",
+      "name": "Jute Handbag",
+      "price": 999,
+      "currency": "INR",
+      "image": "/jutehandbag.png",
+      "category": "Fashion & Accessories",
+      "description": "Stylish handbag crafted from natural jute fibers.",
+      "stock": 1,
+      "material": [
+        "Jute"
+      ],
+      "ecoScore": 93
+    },
+    {
+      "id": "35",
+      "name": "Cork Wallet",
+      "price": 499,
+      "currency": "INR",
+      "image": "/corkwallet.png",
+      "category": "Fashion & Accessories",
+      "description": "Vegan-friendly wallet made from renewable cork material.",
+      "stock": 1,
+      "material": [
+        "Cork"
+      ],
+      "ecoScore": 94
+    },
+    {
+      "id": "36",
+      "name": "Organic Cotton Scarf",
+      "price": 399,
+      "currency": "INR",
+      "image": "/silverstick-stratus-organic-cotton-scarf-navy-Web-1500.webp",
+      "category": "Fashion & Accessories",
+      "description": "Lightweight scarf woven from organic cotton fibers.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton"
+      ],
+      "ecoScore": 91
+    },
+    {
+      "id": "37",
+      "name": "Recycled Rubber Sandals",
+      "price": 599,
+      "currency": "INR",
+      "image": "/rubbersandals.png",
+      "category": "Fashion & Accessories",
+      "description": "Comfortable sandals made from recycled rubber.",
+      "stock": 1,
+      "material": [
+        "Recycled Rubber"
+      ],
+      "ecoScore": 90
+    },
+    {
+      "id": "38",
+      "name": "Bamboo Sunglasses",
+      "price": 899,
+      "currency": "INR",
+      "image": "/bamboosunglasses.png",
+      "category": "Fashion & Accessories",
+      "description": "Trendy sunglasses with frames made from bamboo.",
+      "stock": 1,
+      "material": [
+        "Bamboo"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "39",
+      "name": "Hemp Hat",
+      "price": 449,
+      "currency": "INR",
+      "image": "public/HempHat.jpg",
+      "category": "Fashion & Accessories",
+      "description": "Breathable summer hat made from eco-friendly hemp fibers.",
+      "stock": 1,
+      "material": [
+        "Hemp"
+      ],
+      "ecoScore": 93
+    },
+    {
+      "id": "40",
+      "name": "Upcycled Denim Tote",
+      "price": 799,
+      "currency": "INR",
+      "image": "/denimtotebag.png",
+      "category": "Fashion & Accessories",
+      "description": "Reusable tote bag made from upcycled denim fabric.",
+      "stock": 1,
+      "material": [
+        "Upcycled Denim"
+      ],
+      "ecoScore": 89
+    },
+    {
+      "id": "41",
+      "name": "Bamboo Travel Mug",
+      "price": 499,
+      "currency": "INR",
+      "image": "/travelmug.png",
+      "category": "Travel & Outdoor",
+      "description": "Reusable bamboo travel mug with spill-proof lid.",
+      "stock": 1,
+      "material": [
+        "Bamboo"
+      ],
+      "ecoScore": 93
+    },
+    {
+      "id": "42",
+      "name": "Solar-Powered Lantern",
+      "price": 1299,
+      "currency": "INR",
+      "image": "/solar.png",
+      "category": "Travel & Outdoor",
+      "description": "Portable lantern powered by solar energy, perfect for camping.",
+      "stock": 1,
+      "material": [
+        "Recycled Plastic",
+        "Solar Panel"
+      ],
+      "ecoScore": 95
+    },
+    {
+      "id": "43",
+      "name": "Hemp Travel Pouch",
+      "price": 349,
+      "currency": "INR",
+      "image": "/travelpurse.png",
+      "category": "Travel & Outdoor",
+      "description": "Compact and eco-friendly pouch made from hemp fabric.",
+      "stock": 1,
+      "material": [
+        "Hemp"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "44",
+      "name": "Recycled Nylon Backpack",
+      "price": 1799,
+      "currency": "INR",
+      "image": "/nylonbackpack.png",
+      "category": "Travel & Outdoor",
+      "description": "Durable and lightweight backpack made from recycled nylon.",
+      "stock": 1,
+      "material": [
+        "Recycled Nylon"
+      ],
+      "ecoScore": 90
+    },
+    {
+      "id": "45",
+      "name": "Cork Yoga Mat",
+      "price": 1499,
+      "currency": "INR",
+      "image": "/yogamat.png",
+      "category": "Travel & Outdoor",
+      "description": "Eco-friendly yoga mat made with natural cork surface.",
+      "stock": 1,
+      "material": [
+        "Cork"
+      ],
+      "ecoScore": 94
+    },
+    {
+      "id": "46",
+      "name": "Bamboo Toothbrush Travel Kit",
+      "price": 299,
+      "currency": "INR",
+      "image": "/BambooToothbrushTravelKit.jpg",
+      "category": "Travel & Outdoor",
+      "description": "Compact travel kit with bamboo toothbrush and case.",
+      "stock": 1,
+      "material": [
+        "Bamboo"
+      ],
+      "ecoScore": 93
+    },
+    {
+      "id": "47",
+      "name": "Recycled Polyester Sleeping Bag",
+      "price": 2599,
+      "currency": "INR",
+      "image": "/trekking-sleeping-bag.png",
+      "category": "Travel & Outdoor",
+      "description": "Lightweight sleeping bag made with recycled polyester.",
+      "stock": 1,
+      "material": [
+        "Recycled Polyester"
+      ],
+      "ecoScore": 89
+    },
+    {
+      "id": "48",
+      "name": "Stainless Steel Water Bottle",
+      "price": 699,
+      "currency": "INR",
+      "image": "/steelbottle.png",
+      "category": "Travel & Outdoor",
+      "description": "Durable and reusable stainless steel water bottle.",
+      "stock": 1,
+      "material": [
+        "Stainless Steel"
+      ],
+      "ecoScore": 91
+    },
+    {
+      "id": "49",
+      "name": "Organic Cotton Travel Towel",
+      "price": 899,
+      "currency": "INR",
+      "image": "/organictraveltowel.jpg",
+      "category": "Travel & Outdoor",
+      "description": "Quick-dry travel towel made from organic cotton.",
+      "stock": 1,
+      "material": [
+        "Organic Cotton"
+      ],
+      "ecoScore": 92
+    },
+    {
+      "id": "50",
+      "name": "Upcycled Tent Bag",
+      "price": 1199,
+      "currency": "INR",
+      "image": "/tentbag.png",
+      "category": "Travel & Outdoor",
+      "description": "Multipurpose travel bag made from upcycled tent fabric.",
+      "stock": 1,
+      "material": [
+        "Upcycled Fabric"
+      ],
+      "ecoScore": 90
+    }
   ]
 }

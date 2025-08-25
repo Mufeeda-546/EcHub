@@ -1,27 +1,55 @@
-import React from 'react'
-import {Routes,Route,Link,Navigate, BrowserRouter } from 'react-router-dom'
-import Home from './pages/home'
-import Products from './pages/Products'
-import SignUp from './pages/SignUp'
-import Login from './pages/login'
+// src/App.jsx
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import Productdetail from "./components/Productdetail";
+import Wishlist from "./pages/Wishlist";
+import CartPage from "./pages/Cart.jsx";
+import OrderSuccessPage from "./pages/Ordersuccess";
+import OrdersPage from "./pages/order.jsx";
 
 const App = () => {
-  return (
-    <div>
-      
-     <BrowserRouter>
-     <Routes>
- 
-  <Route path="/" element={<Home />} />
-  <Route path="/products" element={<Products />} />
-  <Route path="/signup" element={<SignUp />} />
-  <Route path="/login" element={<Login />} />
-</Routes>
-</BrowserRouter>
-    
-    </div>
-  )
-}
+  const [wishlist, setWishlist] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
-export default App
+  return (
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              wishlist={wishlist}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="/products"
+          element={<Products wishlist={wishlist} setWishlist={setWishlist} />}
+        />
+        <Route
+          path="/products/:id"
+          element={<Productdetail wishlist={wishlist} setWishlist={setWishlist} />}
+        />
+        <Route
+          path="/wishlist"
+          element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} />}
+        />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
+
+        <Route path="/order-success" element={<OrderSuccessPage />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;

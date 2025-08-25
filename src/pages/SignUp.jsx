@@ -1,49 +1,108 @@
-import React from 'react'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import React, { useState, useContext, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 function SignUp() {
-  const [name,setName]=useState('')
-  const [email,setEmail]=useState('')
-  const [password,setPassword]=useState('')
-  const [confirmPassword,setConfirmPassword]=useState('')
-  const navigate=useNavigate()
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext); // get user from context
 
-  const handleSignup=async (e)=>{
-    e.preventDefault()
-
-    if(!name||!email||!password||!confirmPassword){
-       alert('All fields required')
-       return
+  // If user already logged in, redirect to home
+  useEffect(() => {
+    if (user) {
+      navigate("/"); 
     }
-      if(confirmPassword !==password){
-        return alert("Password do not match")
-      }
-    
-      try{
-      await axios.post('http://localhost:3000/users',{name,email,password})
-    alert("successful")
-  navigate("/login")}
+  }, [user, navigate]);
 
-  catch(error){
-    console.error(error)
-    alert("something went wrong")
-  }}
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !password || !confirmPassword) {
+      alert("All fields are required");
+      return;
+    }
+    if (confirmPassword !== password) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      await axios.post("http://localhost:3000/users", {
+        name,
+        email,
+        password,
+      });
+      alert("Signup Successful");
+      navigate("/login");
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div  className=" flex flex-col justify-center mt-24 border  rounded  ">
-        <h1 className="text-3xl ">Create Account(Sign Up)</h1><br/>
-      <form className="text-center" onSubmit={handleSignup}>
-      <input  className="border rounded w-84 p-2 mb-2" type="text" placeholder="Name" onChange={(e)=>setName(e.target.value)} value={name}/><br/>
-      <input className="border rounded w-84 p-2 mb-2" type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} value={email}/><br/>
-      <input className="border rounded w-84 p-2 mb-2" type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} value={password}/><br/>
-      <input className="border rounded w-84 p-2 mb-2" type="password" placeholder="Confirm password" onChange={(e)=>setConfirmPassword(e.target.value)}  value={confirmPassword}/><br/>
-      <button className="border rounded w-84 p-2 mb-2" >Submit</button>
-      </form>
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <div className="bg-white shadow-lg p-6 rounded-lg w-96">
+        <h2 className="text-2xl font-bold mb-4 text-center text-green-700">
+          Create Account
+        </h2>
+        <form onSubmit={handleSignup} className="flex flex-col">
+          <input
+            className="border rounded px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            type="text"
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+          <input
+            className="border rounded px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            type="email"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+          <input
+            className="border rounded px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
+          <input
+            className="border rounded px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            type="password"
+            placeholder="Confirm Password"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={confirmPassword}
+          />
+
+          {/* Hide SignUp button if already logged in */}
+          {!user && (
+            <button
+              type="submit"
+              className="bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+            >
+              Sign Up
+            </button>
+          )}
+        </form>
+
+        <p className="text-center mt-4 text-sm">
+          Already have an account?{" "}
+          <span
+            onClick={() => navigate("/login")}
+            className="text-green-600 cursor-pointer hover:underline"
+          >
+            Login
+          </span>
+        </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default SignUp
+export default SignUp;
