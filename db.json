@@ -1,34 +1,16 @@
 {
   "users": [
     {
-      "id": "6dbf",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "qw123"
-    },
-    {
-      "id": "2ee3",
+      "id": "4282",
       "name": "Mufeeda",
       "email": "mufiaashi546@gmail.com",
       "password": "123"
     },
     {
-      "id": "b7e0",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "4efe",
-      "name": "mufeeda",
+      "id": "93f6",
+      "name": "hashir",
       "email": "hashmadappally@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "5c51",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
+      "password": "12w3"
     }
   ],
   "products": [

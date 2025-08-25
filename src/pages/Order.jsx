@@ -8,7 +8,7 @@ const OrdersPage = () => {
     return (
       <div className="flex justify-center items-center h-screen">
         <h2 className="text-2xl font-semibold text-gray-700">
-          📭 No orders found
+           No orders found
         </h2>
       </div>
     );
@@ -16,7 +16,7 @@ const OrdersPage = () => {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">📦 Your Orders</h1>
+      <h1 className="text-3xl font-bold mb-6"> Your Orders</h1>
 
       <div className="space-y-6">
         {orders.map((order) => (
@@ -43,7 +43,7 @@ const OrdersPage = () => {
             </ul>
 
             <h2 className="text-xl font-bold mt-4">
-              💰 Total: ₹{order.total}
+               Total: ₹{order.total}
             </h2>
           </div>
         ))}

@@ -15,7 +15,7 @@ const CartPage = () => {
     return (
       <div className="flex justify-center items-center h-screen">
         <h2 className="text-2xl font-semibold text-gray-700">
-          🛒 Your cart is empty
+           Your cart is empty
         </h2>
       </div>
     );

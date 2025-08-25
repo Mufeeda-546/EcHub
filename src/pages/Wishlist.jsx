@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-// import React from "react";
+
 
 const Wishlist = ({ wishlist, setWishlist }) => {
   const removeFromWishlist = (id) => {
@@ -16,7 +16,7 @@ const Wishlist = ({ wishlist, setWishlist }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {wishlist.map(item => (
           <div key={item.id} className="border rounded-lg p-4 relative">
-            <img src={item.image} alt={item.name} className="w-full h-40 object-cover rounded-lg" />
+            <img src={item.image} alt={item.name} className="w-full h-40  rounded-lg" />
             <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
             <p className="text-green-600 font-medium">₹{item.price}</p>
             <button

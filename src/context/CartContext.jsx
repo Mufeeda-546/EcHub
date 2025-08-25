@@ -5,17 +5,14 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // Load cart from localStorage when app starts
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
     if (user) {
-      const savedCart =
-        JSON.parse(localStorage.getItem(`user_cart_${user.id}`)) || [];
+      const savedCart = JSON.parse(localStorage.getItem(`user_cart_${user.id}`)) || [];
       setCart(savedCart);
     }
   }, []);
 
-  // Save cart in localStorage whenever it changes
   const saveCart = (newCart) => {
     setCart(newCart);
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -24,7 +21,6 @@ export function CartProvider({ children }) {
     }
   };
 
-  // ✅ Add product
   const addToCart = (item) => {
     const existing = cart.find((i) => i.id === item.id);
     let updated;
@@ -38,13 +34,11 @@ export function CartProvider({ children }) {
     saveCart(updated);
   };
 
-  // ✅ Remove product
   const removeFromCart = (id) => {
     const updated = cart.filter((i) => i.id !== id);
     saveCart(updated);
   };
 
-  // ✅ Increase quantity
   const increaseQty = (id) => {
     const updated = cart.map((i) =>
       i.id === id ? { ...i, quantity: i.quantity + 1 } : i
@@ -52,7 +46,6 @@ export function CartProvider({ children }) {
     saveCart(updated);
   };
 
-  // ✅ Decrease quantity
   const decreaseQty = (id) => {
     const updated = cart.map((i) =>
       i.id === id && i.quantity > 1 ? { ...i, quantity: i.quantity - 1 } : i
@@ -60,7 +53,6 @@ export function CartProvider({ children }) {
     saveCart(updated);
   };
 
-  // ✅ Total price
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0

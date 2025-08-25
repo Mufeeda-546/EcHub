@@ -1,16 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
-
-
-
 
 function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext); // ✅ from context
+  const { user, login } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +32,7 @@ function Login() {
       );
 
       if (check) {
-        login(check); // ✅ save user in context + localStorage
+        login(check);
         alert("Login Successful");
         navigate("/");
       } else {

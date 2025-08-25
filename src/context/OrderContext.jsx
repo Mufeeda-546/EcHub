@@ -1,27 +1,31 @@
-// src/context/OrderContext.js
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
+import { AuthContext } from "./AuthContext";
 
 export const OrderContext = createContext();
 
 export function OrderProvider({ children }) {
+  const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
 
-  // ✅ Load orders from localStorage when app starts
   useEffect(() => {
     const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
-    setOrders(savedOrders);
-  }, []);
+    if (user) {
+      setOrders(savedOrders.filter((order) => order.userId === user.id));
+    } else {
+      setOrders([]);
+    }
+  }, [user]);
 
-  // ✅ Save orders to localStorage whenever they change
   const saveOrders = (newOrders) => {
-    setOrders(newOrders);
-    localStorage.setItem("orders", JSON.stringify(newOrders));
+    setOrders(newOrders.filter((order) => order.userId === user.id));
+    const allOrders = JSON.parse(localStorage.getItem("orders")) || [];
+    const otherOrders = allOrders.filter((order) => order.userId !== user.id);
+    localStorage.setItem("orders", JSON.stringify([...otherOrders, ...newOrders]));
   };
 
-  // ✅ Place Order (called from CartPage)
   const placeOrder = (cart, userId) => {
     const newOrder = {
-      id: Date.now(), // unique order id
+      id: Date.now(),
       userId,
       items: cart,
       total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
@@ -32,7 +36,7 @@ export function OrderProvider({ children }) {
     const updatedOrders = [...orders, newOrder];
     saveOrders(updatedOrders);
 
-    return newOrder; // return order so we can show it
+    return newOrder;
   };
 
   return (

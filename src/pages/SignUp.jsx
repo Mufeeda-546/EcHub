@@ -9,9 +9,8 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
-  const { user } = useContext(AuthContext); // get user from context
+  const { user } = useContext(AuthContext);
 
-  // If user already logged in, redirect to home
   useEffect(() => {
     if (user) {
       navigate("/"); 
@@ -80,7 +79,6 @@ function SignUp() {
             value={confirmPassword}
           />
 
-          {/* Hide SignUp button if already logged in */}
           {!user && (
             <button
               type="submit"
