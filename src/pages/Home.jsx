@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from 'react'
-import Navbar from '../components/Navbar/Navbar'
+import Navbar from '../components/Navbar'
 import Herosection from '../components/herosection '
 import FooterSection from '../components/Footer'
 import FeaturedCollection from '../components/featuredcollection'
 import axios from 'axios'
+import CategorySection from '../components/Categorysection'
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [wishlist, setWishlist] = useState([])
@@ -25,7 +26,8 @@ const Home = () => {
       />
       <Herosection
       //  searchQuery={searchQuery}
-        /> 
+        />
+        <CategorySection/> 
         <FeaturedCollection products={products} />
         <FooterSection/>
     </div>

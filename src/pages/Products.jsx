@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar/Navbar";
+import { useParams } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 
 const Products = ({ wishlist, setWishlist }) => {
+  const { name } = useParams(); // Get category from URL (if any)
+
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -23,9 +26,16 @@ const Products = ({ wishlist, setWishlist }) => {
 
         const uniqueCategories = [
           "All",
-          ...Array.from(new Set((res.data || []).map((p) => p.category).filter(Boolean))),
+          ...Array.from(
+            new Set((res.data || []).map((p) => p.category).filter(Boolean))
+          ),
         ];
         setCategories(uniqueCategories);
+
+        // If coming from CategorySection, set filter
+        if (name) {
+          setSelectedCategory(name);
+        }
       } catch {
         setError("Failed to load products");
       } finally {
@@ -34,7 +44,7 @@ const Products = ({ wishlist, setWishlist }) => {
     };
 
     fetchProducts();
-  }, []);
+  }, [name]);
 
   useEffect(() => {
     let filtered = [...products];
@@ -115,7 +125,9 @@ const Products = ({ wishlist, setWishlist }) => {
             />
           ))
         ) : (
-          <p className="text-center col-span-full text-gray-500">No products found</p>
+          <p className="text-center col-span-full text-gray-500">
+            No products found
+          </p>
         )}
       </div>
     </div>

@@ -11,6 +11,81 @@
       "name": "hashir",
       "email": "hashmadappally@gmail.com",
       "password": "12w3"
+    },
+    {
+      "id": "aec4",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2ed0",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "bf8a",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "b041",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "364b",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "1w3"
+    },
+    {
+      "id": "bd37",
+      "name": "muf",
+      "email": "mufiaashi546@gmail.com",
+      "password": "wdef"
+    },
+    {
+      "id": "d598",
+      "name": "Mufeeda",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "bb81",
+      "name": "muf",
+      "email": "mufiaashi546@gmail.com",
+      "password": "123"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Personal Care",
+      "image": "/personal-care.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Home Essentials",
+      "image": "/home essentials.avif"
+    },
+    {
+      "id": 3,
+      "name": "Kitchen Essentials",
+      "image": "/kitchen-.webp"
+    },
+    {
+      "id": 4,
+      "name": "Fashion & Accessories",
+      "image": "/fashion.webp"
+    },
+    {
+      "id": 5,
+      "name": "Travel & Outdoor",
+      "image": "/eco-friendly-travel.jpg"
     }
   ],
   "products": [
@@ -463,7 +538,7 @@
       "name": "Hemp Backpack",
       "price": 1499,
       "currency": "INR",
-      "image": "/HempHat.jpg",
+      "image": "/HempBackpack.webp",
       "category": "Fashion & Accessories",
       "description": "Durable eco-friendly backpack made from natural hemp fiber.",
       "stock": 1,
@@ -474,17 +549,17 @@
     },
     {
       "id": "33",
-      "name": "Recycled Polyester Jacket",
-      "price": 2499,
+      "name": "Hemp Hat",
+      "price": 449,
       "currency": "INR",
-      "image": "/recycledpolysterjacket.png",
+      "image": "public/HempHat.jpg",
       "category": "Fashion & Accessories",
-      "description": "Lightweight jacket made from recycled polyester materials.",
+      "description": "Breathable summer hat made from eco-friendly hemp fibers.",
       "stock": 1,
       "material": [
-        "Recycled Polyester"
+        "Hemp"
       ],
-      "ecoScore": 88
+      "ecoScore": 93
     },
     {
       "id": "34",
@@ -530,20 +605,6 @@
     },
     {
       "id": "37",
-      "name": "Recycled Rubber Sandals",
-      "price": 599,
-      "currency": "INR",
-      "image": "/rubbersandals.png",
-      "category": "Fashion & Accessories",
-      "description": "Comfortable sandals made from recycled rubber.",
-      "stock": 1,
-      "material": [
-        "Recycled Rubber"
-      ],
-      "ecoScore": 90
-    },
-    {
-      "id": "38",
       "name": "Bamboo Sunglasses",
       "price": 899,
       "currency": "INR",
@@ -557,18 +618,32 @@
       "ecoScore": 92
     },
     {
-      "id": "39",
-      "name": "Hemp Hat",
-      "price": 449,
+      "id": "38",
+      "name": "Recycled Rubber Sandals",
+      "price": 599,
       "currency": "INR",
-      "image": "public/HempHat.jpg",
+      "image": "/rubbersandals.png",
       "category": "Fashion & Accessories",
-      "description": "Breathable summer hat made from eco-friendly hemp fibers.",
+      "description": "Comfortable sandals made from recycled rubber.",
       "stock": 1,
       "material": [
-        "Hemp"
+        "Recycled Rubber"
       ],
-      "ecoScore": 93
+      "ecoScore": 90
+    },
+    {
+      "id": "39",
+      "name": "Recycled Polyester Jacket",
+      "price": 2499,
+      "currency": "INR",
+      "image": "/recycledpolysterjacket.png",
+      "category": "Fashion & Accessories",
+      "description": "Lightweight jacket made from recycled polyester materials.",
+      "stock": 1,
+      "material": [
+        "Recycled Polyester"
+      ],
+      "ecoScore": 88
     },
     {
       "id": "40",

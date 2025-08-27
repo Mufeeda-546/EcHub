@@ -1,19 +1,20 @@
-// Productdetail.jsx
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "./Navbar/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/wishlistcontext";
 import { OrderContext } from "../context/ordercontext";
+import Navbar from "./Navbar";
 
-const Productdetail = ({ wishlist, setWishlist }) => {
+const ProductDetail = () => {
   const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
 
   const { addToCart } = useContext(CartContext);
+  const { wishlist, toggleWishlist } = useContext(WishlistContext);
   const { placeOrder } = useContext(OrderContext);
 
   const [product, setProduct] = useState(location.state?.product || null);
@@ -23,16 +24,16 @@ const Productdetail = ({ wishlist, setWishlist }) => {
   useEffect(() => {
     if (!product) {
       fetch(`http://localhost:3000/products/${id}`)
-        .then((res) => {
+        .then(res => {
           if (!res.ok) throw new Error("Failed to fetch product");
           return res.json();
         })
-        .then((data) => {
+        .then(data => {
           setProduct(data);
           setLoading(false);
         })
-        .catch((error) => {
-          setError(error);
+        .catch(err => {
+          setError(err);
           setLoading(false);
         });
     }
@@ -44,40 +45,21 @@ const Productdetail = ({ wishlist, setWishlist }) => {
 
   const isInWishlist = wishlist.some(item => item.id === product.id);
 
-  const toggleWishlist = () => {
-    if (isInWishlist) {
-      setWishlist(wishlist.filter(item => item.id !== product.id));
-    } else {
-      setWishlist([...wishlist, product]);
-    }
-  };
-
   const handleBuyNow = () => {
-    const order = {
-      id: Date.now().toString(),
-      date: new Date().toLocaleDateString(),
-      status: "Confirmed",
-      items: [{ ...product, quantity: 1 }],
-      total: product.price,
-    };
-
+    const order = { id: Date.now().toString(), date: new Date().toLocaleDateString(), status: "Confirmed", items: [{ ...product, quantity: 1 }], total: product.price };
     placeOrder(order);
     navigate("/order-success", { state: { order } });
   };
 
   return (
     <div>
-      <Navbar wishlist={wishlist} />
+      <Navbar />
       <div className="flex justify-center mt-10 px-4">
         <div className="bg-white rounded-xl shadow-lg p-6 max-w-4xl w-full flex flex-col md:flex-row gap-6">
           <div className="flex-shrink-0 w-full md:w-1/2 relative">
-            <img 
-              src={product.image} 
-              alt={product.name} 
-              className="w-full h-80 object-cover rounded-lg shadow-sm"
-            />
+            <img src={product.image} alt={product.name} className="w-full h-80 object-cover rounded-lg shadow-sm" />
             <button
-              onClick={toggleWishlist}
+              onClick={() => toggleWishlist({ ...product })}
               className="absolute top-2 right-2 text-red-500 text-2xl transition-transform transform hover:scale-125"
             >
               <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} />
@@ -91,13 +73,13 @@ const Productdetail = ({ wishlist, setWishlist }) => {
               <p className="text-gray-700 mb-6">{product.description || "No description available"}</p>
             </div>
             <div className="flex gap-4">
-              <button 
-                onClick={() => addToCart(product)}
+              <button
+                onClick={() => addToCart({ ...product })}
                 className="flex-1 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition"
               >
                 Add to Cart
               </button>
-              <button 
+              <button
                 onClick={handleBuyNow}
                 className="flex-1 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition"
               >
@@ -109,6 +91,6 @@ const Productdetail = ({ wishlist, setWishlist }) => {
       </div>
     </div>
   );
-}
+};
 
-export default Productdetail;
+export default ProductDetail;

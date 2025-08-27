@@ -4,19 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/wishlistcontext";
 
-const ProductCard = ({ id, name, price, image, description, wishlist, setWishlist }) => {
+const ProductCard = ({ id, name, price, image, description }) => {
   const { addToCart } = useContext(CartContext);
+  const { wishlist, toggleWishlist } = useContext(WishlistContext);
 
-  const isInWishlist = wishlist?.some(item => item.id === id);
-
-  const toggleWishlist = () => {
-    if (isInWishlist) {
-      setWishlist(wishlist.filter(item => item.id !== id));
-    } else {
-      setWishlist([...wishlist, { id, name, price, image, description }]);
-    }
-  };
+  const isInWishlist = wishlist.some(item => item.id === id);
 
   return (
     <div className="bg-white rounded-xl shadow-md p-4 w-56 text-center m-2 relative transition-transform transform hover:scale-105">
@@ -27,7 +21,7 @@ const ProductCard = ({ id, name, price, image, description, wishlist, setWishlis
       </Link>
 
       <button
-        onClick={toggleWishlist}
+        onClick={() => toggleWishlist({ id, name, price, image, description })}
         className="absolute top-2 right-2 text-xl text-red-500 transition-transform transform hover:scale-125"
       >
         <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} />

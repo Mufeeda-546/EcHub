@@ -1,8 +1,10 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect,useContext } from "react";
+import { toast } from "react-toastify";
+import { AuthContext } from "./AuthContext";
 
 export const CartContext = createContext();
-
 export function CartProvider({ children }) {
+  const {user}=useContext(AuthContext)
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -11,7 +13,7 @@ export function CartProvider({ children }) {
       const savedCart = JSON.parse(localStorage.getItem(`user_cart_${user.id}`)) || [];
       setCart(savedCart);
     }
-  }, []);
+  }, [user]);
 
   const saveCart = (newCart) => {
     setCart(newCart);
@@ -25,9 +27,10 @@ export function CartProvider({ children }) {
     const existing = cart.find((i) => i.id === item.id);
     let updated;
     if (existing) {
-      updated = cart.map((i) =>
-        i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-      );
+      updated = cart.map((i) =>{
+        toast.info("you have already added ")
+       return  i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+    });
     } else {
       updated = [...cart, { ...item, quantity: 1 }];
     }
