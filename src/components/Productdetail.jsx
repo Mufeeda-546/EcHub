@@ -46,9 +46,8 @@ const ProductDetail = () => {
   const isInWishlist = wishlist.some(item => item.id === product.id);
 
   const handleBuyNow = () => {
-    const order = { id: Date.now().toString(), date: new Date().toLocaleDateString(), status: "Confirmed", items: [{ ...product, quantity: 1 }], total: product.price };
-    placeOrder(order);
-    navigate("/order-success", { state: { order } });
+  
+    navigate("/order");
   };
 
   return (
@@ -58,12 +57,13 @@ const ProductDetail = () => {
         <div className="bg-white rounded-xl shadow-lg p-6 max-w-4xl w-full flex flex-col md:flex-row gap-6">
           <div className="flex-shrink-0 w-full md:w-1/2 relative">
             <img src={product.image} alt={product.name} className="w-full h-80 object-cover rounded-lg shadow-sm" />
-            <button
-              onClick={() => toggleWishlist({ ...product })}
-              className="absolute top-2 right-2 text-red-500 text-2xl transition-transform transform hover:scale-125"
-            >
-              <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} />
-            </button>
+          <button
+      onClick={() => toggleWishlist({ ...product }, navigate)}
+     className="absolute top-2 right-2 text-red-500 text-2xl transition-transform transform hover:scale-125"
+ >
+  <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} />
+</button>
+
           </div>
 
           <div className="flex flex-col justify-between w-full md:w-1/2">

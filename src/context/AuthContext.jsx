@@ -1,4 +1,3 @@
-// context/AuthContext.jsx
 import React, { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
@@ -6,6 +5,7 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
+  // Load logged-in user from localStorage
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (savedUser) setUser(savedUser);
@@ -26,8 +26,10 @@ export function AuthProvider({ children }) {
     localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
   };
 
+  const isAdmin = () => user?.role === "admin";
+
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateUser }}>
+    <AuthContext.Provider value={{ user, login, logout, updateUser, isAdmin }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,3 +1,4 @@
+// src/context/OrderContext.jsx
 import React, { createContext, useState, useEffect, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 
@@ -7,40 +8,52 @@ export function OrderProvider({ children }) {
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
-    if (user) {
-      setOrders(savedOrders.filter((order) => order.userId === user.id));
-    } else {
-      setOrders([]);
+  const fetchOrders = async () => {
+    if (!user) return;
+    try {
+      const res = await fetch(`http://localhost:3000/orders?userId=${user.id}`);
+      const data = await res.json();
+      setOrders(data);
+    } catch (error) {
+      console.error("Error fetching orders", error);
     }
+  };
+
+  useEffect(() => {
+    fetchOrders();
   }, [user]);
+const placeOrder = async (cart, address, payment) => {
+  if (!user) return null;
 
-  const saveOrders = (newOrders) => {
-    setOrders(newOrders.filter((order) => order.userId === user.id));
-    const allOrders = JSON.parse(localStorage.getItem("orders")) || [];
-    const otherOrders = allOrders.filter((order) => order.userId !== user.id);
-    localStorage.setItem("orders", JSON.stringify([...otherOrders, ...newOrders]));
+  const newOrder = {
+    userId: user.id, // 👈 link order to logged-in user
+    items: cart,
+    total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+    address,
+    payment,
+    date: new Date().toLocaleString(),
+    status: "Confirmed",
   };
 
-  const placeOrder = (cart, userId) => {
-    const newOrder = {
-      id: Date.now(),
-      userId,
-      items: cart,
-      total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
-      date: new Date().toLocaleString(),
-      status: "Confirmed",
-    };
+  try {
+    const res = await fetch("http://localhost:3000/orders", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newOrder),
+    });
 
-    const updatedOrders = [...orders, newOrder];
-    saveOrders(updatedOrders);
+    const savedOrder = await res.json(); // ✅ server will return the object with generated id
 
-    return newOrder;
-  };
+    setOrders((prev) => [...prev, savedOrder]); // ✅ keep UI in sync
+    return savedOrder;
+  } catch (error) {
+    console.error("Error placing order", error);
+    return null;
+  }
+};
 
   return (
-    <OrderContext.Provider value={{ orders, placeOrder }}>
+    <OrderContext.Provider value={{ orders, placeOrder, fetchOrders }}>
       {children}
     </OrderContext.Provider>
   );

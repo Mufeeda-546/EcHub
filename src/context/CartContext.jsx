@@ -1,40 +1,55 @@
-import React, { createContext, useState, useEffect,useContext } from "react";
+// src/context/CartContext.jsx
+import React, { createContext, useState, useEffect, useContext } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
+
 export function CartProvider({ children }) {
-  const {user}=useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const [cart, setCart] = useState([]);
+  
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("loggedInUser"));
     if (user) {
-      const savedCart = JSON.parse(localStorage.getItem(`user_cart_${user.id}`)) || [];
+      const savedCart =
+        JSON.parse(localStorage.getItem(`user_cart_${user.id}`)) || [];
       setCart(savedCart);
+    } else {
+      setCart([]);
     }
   }, [user]);
 
   const saveCart = (newCart) => {
     setCart(newCart);
-    const user = JSON.parse(localStorage.getItem("loggedInUser"));
     if (user) {
       localStorage.setItem(`user_cart_${user.id}`, JSON.stringify(newCart));
     }
   };
 
   const addToCart = (item) => {
+    if (!user) {
+      toast.error("Please login to add items to your cart");
+
+    ;
+
+      return false;
+    }
+
     const existing = cart.find((i) => i.id === item.id);
     let updated;
     if (existing) {
-      updated = cart.map((i) =>{
-        toast.info("you have already added ")
-       return  i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-    });
+      updated = cart.map((i) =>
+        i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+      );
+      toast.info("Item quantity updated");
     } else {
       updated = [...cart, { ...item, quantity: 1 }];
+      toast.success("Item added to cart");
     }
     saveCart(updated);
+    return true;
   };
 
   const removeFromCart = (id) => {
@@ -56,6 +71,13 @@ export function CartProvider({ children }) {
     saveCart(updated);
   };
 
+  const clearCart = () => {
+    setCart([]);
+    if (user) {
+      localStorage.removeItem(`user_cart_${user.id}`);
+    }
+  };
+
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -69,6 +91,7 @@ export function CartProvider({ children }) {
         removeFromCart,
         increaseQty,
         decreaseQty,
+        clearCart,
         totalPrice,
       }}
     >

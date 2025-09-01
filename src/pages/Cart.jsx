@@ -1,36 +1,35 @@
-
+// src/pages/CartPage.jsx
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { OrderContext } from "../context/ordercontext";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CartPage = () => {
-  const { cart, removeFromCart, increaseQty, decreaseQty, totalPrice } = useContext(CartContext);
-  const { placeOrder } = useContext(OrderContext);
+  const { cart, removeFromCart, increaseQty, decreaseQty, totalPrice } =
+    useContext(CartContext);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  // If cart is empty
   if (cart.length === 0) {
     return (
       <div className="flex justify-center items-center h-screen">
         <h2 className="text-2xl font-semibold text-gray-700">
-           Your cart is empty
+          Your cart is empty
         </h2>
       </div>
     );
   }
 
+  // ✅ Checkout logic with login check
   const handleCheckout = () => {
     if (!user) {
-      alert("Please login to place an order");
-      navigate("/login");
-      return;
+      toast.error("Please login to checkout");
+      navigate("/login", { state: { from: "/cart" } });
+    } else {
+      navigate("/order"); // Goes to Order Page
     }
-
-    const order = placeOrder(cart, user.id);
-    localStorage.removeItem(`user_cart_${user.id}`);
-    navigate("/order-success", { state: { order } });
   };
 
   return (

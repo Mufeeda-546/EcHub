@@ -1,89 +1,45 @@
 {
   "users": [
     {
-      "id": "4282",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "93f6",
-      "name": "hashir",
-      "email": "hashmadappally@gmail.com",
-      "password": "12w3"
-    },
-    {
-      "id": "aec4",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
       "id": "2ed0",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "aw3",
+      "status": "active",
+      "role": "admin"
     },
     {
-      "id": "bf8a",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "b041",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "364b",
-      "name": "user",
-      "email": "user@gmail.com",
-      "password": "1w3"
-    },
-    {
-      "id": "bd37",
-      "name": "muf",
-      "email": "mufiaashi546@gmail.com",
-      "password": "wdef"
-    },
-    {
-      "id": "d598",
-      "name": "Mufeeda",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "bb81",
-      "name": "muf",
-      "email": "mufiaashi546@gmail.com",
-      "password": "123"
+      "id": "6383",
+      "name": "mufeeda",
+      "email": "mufiaas@gmail.com",
+      "password": "123",
+      "role": "user",
+      "status": "active"
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Personal Care",
       "image": "/personal-care.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Home Essentials",
       "image": "/home essentials.avif"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Kitchen Essentials",
       "image": "/kitchen-.webp"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Fashion & Accessories",
       "image": "/fashion.webp"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Travel & Outdoor",
       "image": "/eco-friendly-travel.jpg"
     }
@@ -799,6 +755,27 @@
         "Upcycled Fabric"
       ],
       "ecoScore": 90
+    }
+  ],
+  "orders": [
+    {
+      "id": "6aa7",
+      "userId": "6383",
+      "items": [
+        {
+          "id": "2",
+          "name": "Refillable Deodrant Stick",
+          "price": 299,
+          "image": "/refillabledeodrantstick.png",
+          "description": "Aluminium case,refillable core for zero waste",
+          "quantity": 2
+        }
+      ],
+      "total": 598,
+      "address": "gfg",
+      "payment": "cod",
+      "date": "29/8/2025, 2:44:50 pm",
+      "status": "Confirmed"
     }
   ]
 }
