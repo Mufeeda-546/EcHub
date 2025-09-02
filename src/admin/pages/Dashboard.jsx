@@ -57,10 +57,8 @@ const DashboardPage = () => {
 
   if (loading) return <p className="p-4">Loading dashboard...</p>;
 
-  // Total revenue
   const totalRevenue = orders.reduce((sum, order) => sum + Number(order.total), 0);
 
-  // Revenue trend: group by order date
   const revenueTrend = orders
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .map((order) => ({
@@ -74,13 +72,13 @@ const DashboardPage = () => {
       return acc;
     }, []);
 
-  const barData = [
-    { name: "Users", value: users.length },
-    { name: "Orders", value: orders.length },
-    { name: "Products", value: products.length },
-    { name: "Categories", value: categories.length },
-    { name: "Revenue (₹)", value: totalRevenue },
-  ];
+ const barData = [
+  { name: "Users", value: users.length },
+  { name: "Orders", value: orders.length },
+  { name: "Products", value: products.length },
+  { name: "Categories", value: categories.length },
+  { name: "Revenue (₹ in K)", value: Math.round(totalRevenue / 1000) },
+];
 
   const pieData = categories
     .map((cat) => ({
@@ -91,7 +89,6 @@ const DashboardPage = () => {
 
   return (
     <div className="space-y-6">
-      {/* Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
         <div className="bg-white p-4 rounded shadow text-center">Total Users: {users.length}</div>
         <div className="bg-white p-4 rounded shadow text-center">Total Orders: {orders.length}</div>
@@ -100,9 +97,7 @@ const DashboardPage = () => {
         <div className="bg-white p-4 rounded shadow text-center">Total Revenue: ₹{totalRevenue}</div>
       </div>
 
-      {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Bar Chart */}
         <div className="bg-white p-4 rounded shadow h-96">
           <h3 className="font-semibold mb-2 text-center">Counts Overview</h3>
           <ResponsiveContainer width="100%" height="90%">
@@ -117,31 +112,37 @@ const DashboardPage = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Pie Chart */}
         <div className="bg-white p-4 rounded shadow h-96 flex flex-col items-center justify-center">
           <h3 className="font-semibold mb-2 text-center">Products by Category</h3>
           <ResponsiveContainer width="100%" height="90%">
-            <PieChart>
-              <Pie
-                data={pieData}
-                dataKey="value"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                outerRadius="80%"
-                fill="#8884d8"
-                label
-              >
-                {pieData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-            </PieChart>
+    <PieChart>
+  <Pie
+    data={pieData}
+    dataKey="value"
+    nameKey="name"
+    cx="40%"  
+    cy="50%"
+    outerRadius="80%"
+    fill="#8884d8"
+    label
+  >
+    {pieData.map((entry, index) => (
+      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+    ))}
+  </Pie>
+
+  <Legend
+    layout="vertical"
+    align="right"
+    verticalAlign="middle"
+  />
+</PieChart>
+
+
           </ResponsiveContainer>
         </div>
       </div>
 
-      {/* Revenue Trend Line */}
       <div className="bg-white p-4 rounded shadow h-96">
         <h3 className="font-semibold mb-2 text-center">Revenue Trend</h3>
         <ResponsiveContainer width="100%" height="90%">
@@ -156,7 +157,6 @@ const DashboardPage = () => {
         </ResponsiveContainer>
       </div>
 
-      {/* Recent Orders */}
       <div className="bg-white p-4 rounded shadow overflow-auto">
         <h3 className="font-semibold mb-2 text-center">Recent Orders</h3>
         <table className="w-full text-left border-collapse">

@@ -9,7 +9,6 @@ const OrderManagementPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
 
-  // Fetch orders and users from JSON server
   const fetchOrders = async () => {
     try {
       const [ordersRes, usersRes] = await Promise.all([
@@ -36,7 +35,6 @@ const OrderManagementPage = () => {
     fetchOrders();
   }, []);
 
-  // Filter orders based on search term and status
   const filterOrders = (searchValue = searchTerm, status = statusFilter) => {
     const value = searchValue.toLowerCase();
     const filtered = orders.filter((order) => {
@@ -109,10 +107,7 @@ const OrderManagementPage = () => {
 
   return (
     <div className="p-6 space-y-6">
-      {/* Page Header */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-        {/* <h1 className="text-2xl font-bold text-gray-800">Order Management</h1> */}
-
         <div className="flex flex-col md:flex-row gap-2 w-full md:w-1/2">
           <input
             type="text"
@@ -121,7 +116,6 @@ const OrderManagementPage = () => {
             placeholder="Search by Order ID, User, Product, Status or Payment"
             className="border rounded-lg p-2 flex-1 focus:ring-2 focus:ring-green-400 focus:outline-none"
           />
-
           <select
             value={statusFilter}
             onChange={handleStatusFilter}
@@ -137,7 +131,6 @@ const OrderManagementPage = () => {
         </div>
       </div>
 
-      {/* Orders Table */}
       <div className="bg-white shadow-md rounded-lg overflow-x-auto">
         <table className="w-full min-w-[900px] text-left border-collapse">
           <thead className="bg-green-600 text-white">

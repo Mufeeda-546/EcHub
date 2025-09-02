@@ -7,17 +7,14 @@ const ProfilePage = () => {
   const { user, updateUser, logout } = useContext(AuthContext);
   const [isEditing, setIsEditing] = useState(false);
 
-  // form state
   const [name, setName] = useState(user?.name || "");
   const [email, setEmail] = useState(user?.email || "");
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  // Save changes to backend
   const handleSave = async () => {
     try {
-      // Password check
       if (newPassword && newPassword !== confirmPassword) {
         alert("New passwords do not match!");
         return;
@@ -27,13 +24,11 @@ const ProfilePage = () => {
         ...user,
         name,
         email,
-        password: newPassword ? newPassword : user.password, // only update if new one given
+        password: newPassword ? newPassword : user.password,
       };
 
-      // Update backend (JSON server example)
-      await axios.put(`http://localhost:5000/users/${user.id}`, updatedUser);
+      await axios.put(`http://localhost:3000/users/${user.id}`, updatedUser);
 
-      // Update context + localStorage
       updateUser(updatedUser);
 
       alert("Profile updated successfully!");
@@ -54,7 +49,6 @@ const ProfilePage = () => {
   return (
     <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-lg bg-white">
       {!isEditing ? (
-        // ---------------- Profile View ----------------
         <div>
           <h2 className="text-xl font-bold mb-4">Profile</h2>
           <p><strong>Name:</strong> {user.name}</p>
@@ -76,11 +70,9 @@ const ProfilePage = () => {
           </div>
         </div>
       ) : (
-        // ---------------- Edit Profile ----------------
         <div>
           <h2 className="text-xl font-bold mb-4">Edit Profile</h2>
 
-          {/* Name */}
           <label className="block mb-2 font-semibold">Name</label>
           <input
             className="w-full border p-2 rounded mb-4"
@@ -88,7 +80,6 @@ const ProfilePage = () => {
             onChange={(e) => setName(e.target.value)}
           />
 
-          {/* Email */}
           <label className="block mb-2 font-semibold">Email</label>
           <input
             className="w-full border p-2 rounded mb-4"
@@ -96,7 +87,6 @@ const ProfilePage = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          {/* Change Password Section */}
           <h3 className="text-lg font-bold mt-4 mb-2">Change Password</h3>
 
           <label className="block mb-2 font-semibold">Current Password</label>
@@ -123,7 +113,6 @@ const ProfilePage = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
-          {/* Buttons */}
           <div className="mt-6 flex justify-between">
             <button
               onClick={handleSave}

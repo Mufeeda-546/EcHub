@@ -23,7 +23,6 @@ export default function SignUp() {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    // Validate all fields
     if (!name || !email || !password || !confirmPassword || !phone || !place || !address || !pincode) {
       alert("All fields are required");
       return;
@@ -35,7 +34,6 @@ export default function SignUp() {
     }
 
     try {
-      // Check if email already exists
       const existing = await axios.get(
         `http://localhost:3000/users?email=${encodeURIComponent(email.trim())}`
       );
@@ -44,7 +42,6 @@ export default function SignUp() {
         return;
       }
 
-      // Save user to JSON Server
       await axios.post("http://localhost:3000/users", {
         name: name.trim(),
         email: email.trim(),

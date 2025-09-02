@@ -15,6 +15,75 @@
       "password": "123",
       "role": "user",
       "status": "active"
+    },
+    {
+      "id": "dea6",
+      "name": "Mufi",
+      "email": "mufiaashi546@gmail.com",
+      "password": "3465",
+      "phone": "12345677890",
+      "place": "keral",
+      "address": "fgv xggxb",
+      "pincode": "123456",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "7a43",
+      "name": "adil",
+      "email": "adil@gmail.com",
+      "password": "1235",
+      "phone": "12345677890",
+      "place": "kottakkal",
+      "address": "drsfretgydg",
+      "pincode": "123434",
+      "role": "user",
+      "status": "blocked"
+    },
+    {
+      "id": "845b",
+      "name": "anu",
+      "email": "anu@gmail.com",
+      "password": "122",
+      "phone": "12345677890",
+      "place": "malappuram",
+      "address": "dgydhsujs",
+      "pincode": "123434",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "22da",
+      "name": "yamin",
+      "email": "yamin@gmail.com",
+      "password": "123",
+      "phone": "12345677890",
+      "place": "calicut",
+      "address": "dgydhsufstha",
+      "pincode": "123434",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "3d47",
+      "name": "diya",
+      "email": "diya@gmail.com",
+      "password": "123",
+      "phone": "12345677890",
+      "place": "calicut",
+      "address": "dgydhsufstha",
+      "pincode": "123434",
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": "1756791945272",
+      "name": "diyana",
+      "email": "diyana@gmail.com",
+      "phone": "13444456765",
+      "address": "drsfretgydg",
+      "role": "user",
+      "status": "active"
     }
   ],
   "categories": [
@@ -755,6 +824,16 @@
         "Upcycled Fabric"
       ],
       "ecoScore": 90
+    },
+    {
+      "id": "1756792222670",
+      "name": "bamboo fibre canister",
+      "price": "129",
+      "currency": "INR",
+      "category": "Home Essentials",
+      "stock": "2",
+      "description": "biodegradable  product",
+      "image": "https://r.search.yahoo.com/rdclks/dWU9N2p2N3YzZGtiZDB2byZ1dD0xNzU2NzkxODAwMDYxJnVvPTgyNzM4NjIxNjk0MDY4MSZsdD0yJnM9MSZlcz1vOWlwaFhDVURJNlIyZElyTkR6UXVaemhtMDVRMno5TGtodDZXTDJwMTY5eVBFYmxyNTd1dm5RT0F5bUFFNVFfbWxiT1lZN2liOTgt/RV=2/RE=1759383800/RO=14/RU=https%3a%2f%2fwww.bing.com%2faclick%3fld%3de8XRGFMXURbE4jGnlTSdjGqjVUCUwPRJGeItiEjEMvWHpryE4JGLmt4DkdmryEx8hzRDdLpFUA4_2ZycbjWu31UpLBpVRXLGVxrXpqVnOvgIgbc0jjSK8T8G-ZbZn8JLYiJhaVQJuXYhp1gIWO1sIDLM2WcRATnl95c6vIG60e9nEOYpbN1mOxay__PHdY7UY7qB4GNg%26u%3daHR0cHMlM2ElMmYlMmZ3d3cuZmlyc3RjcnkuY29tJTJmZWFydGhpc20lMmZlYXJ0aGlzbS1lY28tZnJpZW5kbHktYmFtYm9vLWZpYnJlLWNhbmlzdGVyLXB1cnBsZSUyZjEwNTc3MzQ1JTJmcHJvZHVjdC1kZXRhaWwlM2ZyZWYlM2RCU05fU2hvcHBpbmdfMl9EaXNoZXMtYW5kLVV0ZW5zaWxzIUJTTi1TdGFuZGFyZF9BbGxfU2VhcmNoX0FkcyElMjZtc2Nsa2lkJTNkZGIxN2QwYzgwYzhiMTA0YzY3NmViODdlOGY3MzJhYzklMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RCU04tU3RhbmRhcmRfQWxsX1NlYXJjaF9BZHMlMjZ1dG1fdGVybSUzZDQ1ODYzMzc4ODI4OTg5NjQlMjZ1dG1fY29udGVudCUzZEFkJTI1MjBncm91cCUyNTIwJTI1MjM"
     }
   ],
   "orders": [
@@ -775,6 +854,396 @@
       "address": "gfg",
       "payment": "cod",
       "date": "29/8/2025, 2:44:50 pm",
+      "status": "Confirmed"
+    },
+    {
+      "id": "3d8d",
+      "userId": "dea6",
+      "items": [
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 2
+        },
+        {
+          "id": "12",
+          "name": "Organic Cotton Bedsheet",
+          "price": 1299,
+          "image": "/organiccottonbedsheets.webp",
+          "description": "Soft breathable bedsheet made from 100% organic cotton.",
+          "quantity": 1
+        },
+        {
+          "id": "9",
+          "name": "Plant-Based Dental Floss",
+          "price": 179,
+          "image": "/dentalfloss.jpg",
+          "description": "Corn fiber dental floss in reusable glass jar.",
+          "quantity": 2
+        },
+        {
+          "id": "6",
+          "name": "Eco-friendly Cotton Earbuds",
+          "price": 59,
+          "image": "/eco-friendlyearbuds.png",
+          "description": "Paper stick with organic cotton tips,fully biodegradable.",
+          "quantity": 1
+        },
+        {
+          "id": "11",
+          "name": "Reusable Bamboo Kitchen Towels",
+          "price": 349,
+          "image": "/kitchentowel.jpg",
+          "description": "Washable bamboo fiber towels that replace paper towels.",
+          "quantity": 4
+        }
+      ],
+      "total": 3910,
+      "address": "defrgts",
+      "payment": "cod",
+      "date": "2/9/2025, 10:25:36 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "f8f5",
+      "userId": "7a43",
+      "items": [
+        {
+          "id": "48",
+          "name": "Stainless Steel Water Bottle",
+          "price": 699,
+          "image": "/steelbottle.png",
+          "description": "Durable and reusable stainless steel water bottle.",
+          "quantity": 1
+        },
+        {
+          "id": "41",
+          "name": "Bamboo Travel Mug",
+          "price": 499,
+          "image": "/travelmug.png",
+          "description": "Reusable bamboo travel mug with spill-proof lid.",
+          "quantity": 1
+        },
+        {
+          "id": "39",
+          "name": "Recycled Polyester Jacket",
+          "price": 2499,
+          "image": "/recycledpolysterjacket.png",
+          "description": "Lightweight jacket made from recycled polyester materials.",
+          "quantity": 1
+        },
+        {
+          "id": "49",
+          "name": "Organic Cotton Travel Towel",
+          "price": 899,
+          "image": "/organictraveltowel.jpg",
+          "description": "Quick-dry travel towel made from organic cotton.",
+          "quantity": 1
+        },
+        {
+          "id": "50",
+          "name": "Upcycled Tent Bag",
+          "price": 1199,
+          "image": "/tentbag.png",
+          "description": "Multipurpose travel bag made from upcycled tent fabric.",
+          "quantity": 1
+        },
+        {
+          "id": "37",
+          "name": "Bamboo Sunglasses",
+          "price": 899,
+          "image": "/bamboosunglasses.png",
+          "description": "Trendy sunglasses with frames made from bamboo.",
+          "quantity": 1
+        }
+      ],
+      "total": 6694,
+      "address": "wedwrfst",
+      "payment": "cod",
+      "date": "2/9/2025, 10:37:54 am",
+      "status": "cancelled"
+    },
+    {
+      "id": "e319",
+      "userId": "7a43",
+      "items": [
+        {
+          "id": "48",
+          "name": "Stainless Steel Water Bottle",
+          "price": 699,
+          "image": "/steelbottle.png",
+          "description": "Durable and reusable stainless steel water bottle.",
+          "quantity": 1
+        },
+        {
+          "id": "41",
+          "name": "Bamboo Travel Mug",
+          "price": 499,
+          "image": "/travelmug.png",
+          "description": "Reusable bamboo travel mug with spill-proof lid.",
+          "quantity": 1
+        },
+        {
+          "id": "39",
+          "name": "Recycled Polyester Jacket",
+          "price": 2499,
+          "image": "/recycledpolysterjacket.png",
+          "description": "Lightweight jacket made from recycled polyester materials.",
+          "quantity": 1
+        },
+        {
+          "id": "49",
+          "name": "Organic Cotton Travel Towel",
+          "price": 899,
+          "image": "/organictraveltowel.jpg",
+          "description": "Quick-dry travel towel made from organic cotton.",
+          "quantity": 1
+        },
+        {
+          "id": "50",
+          "name": "Upcycled Tent Bag",
+          "price": 1199,
+          "image": "/tentbag.png",
+          "description": "Multipurpose travel bag made from upcycled tent fabric.",
+          "quantity": 1
+        },
+        {
+          "id": "37",
+          "name": "Bamboo Sunglasses",
+          "price": 899,
+          "image": "/bamboosunglasses.png",
+          "description": "Trendy sunglasses with frames made from bamboo.",
+          "quantity": 1
+        }
+      ],
+      "total": 6694,
+      "address": "drfzft",
+      "payment": "cod",
+      "date": "2/9/2025, 10:38:19 am",
+      "status": "delivered"
+    },
+    {
+      "id": "f212",
+      "userId": "7a43",
+      "items": [
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 1
+        }
+      ],
+      "total": 399,
+      "address": "vgdhbhef",
+      "payment": "cod",
+      "date": "2/9/2025, 10:49:53 am",
+      "status": "pending"
+    },
+    {
+      "id": "7de8",
+      "userId": "7a43",
+      "items": [
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 1
+        }
+      ],
+      "total": 399,
+      "address": "ffyhh",
+      "payment": "cod",
+      "date": "2/9/2025, 10:50:23 am",
+      "status": "cancelled"
+    },
+    {
+      "id": "d3f8",
+      "userId": "7a43",
+      "items": [
+        {
+          "id": "5",
+          "name": "Natural Loofah",
+          "price": 99,
+          "image": "/loofah.png",
+          "description": "Made from dried gourd,100% compostable",
+          "quantity": 1
+        }
+      ],
+      "total": 99,
+      "address": "cgswv",
+      "payment": "cod",
+      "date": "2/9/2025, 10:56:25 am",
+      "status": "shipped"
+    },
+    {
+      "id": "6a0b",
+      "userId": "845b",
+      "items": [
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 1
+        },
+        {
+          "id": "8",
+          "name": "Reusable Makeup Remover Pads",
+          "price": 199,
+          "image": "/makeuprmovablepads.webp",
+          "description": "Washable organic cotton pads for makeup removal.",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Natural Loofah",
+          "price": 99,
+          "image": "/loofah.png",
+          "description": "Made from dried gourd,100% compostable",
+          "quantity": 1
+        },
+        {
+          "id": "37",
+          "name": "Bamboo Sunglasses",
+          "price": 899,
+          "image": "/bamboosunglasses.png",
+          "description": "Trendy sunglasses with frames made from bamboo.",
+          "quantity": 1
+        },
+        {
+          "id": "39",
+          "name": "Recycled Polyester Jacket",
+          "price": 2499,
+          "image": "/recycledpolysterjacket.png",
+          "description": "Lightweight jacket made from recycled polyester materials.",
+          "quantity": 1
+        }
+      ],
+      "total": 4095,
+      "address": "eddynjnghjk",
+      "payment": "cod",
+      "date": "2/9/2025, 11:06:01 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "fab9",
+      "userId": "22da",
+      "items": [
+        {
+          "id": "42",
+          "name": "Solar-Powered Lantern",
+          "price": 1299,
+          "image": "/solar.png",
+          "description": "Portable lantern powered by solar energy, perfect for camping.",
+          "quantity": 1
+        },
+        {
+          "id": "31",
+          "name": "Organic Cotton T-Shirt",
+          "price": 699,
+          "image": "/cottontshirt.png",
+          "description": "Soft and breathable T-shirt made from 100% organic cotton.",
+          "quantity": 1
+        },
+        {
+          "id": "33",
+          "name": "Hemp Hat",
+          "price": 449,
+          "image": "public/HempHat.jpg",
+          "description": "Breathable summer hat made from eco-friendly hemp fibers.",
+          "quantity": 1
+        }
+      ],
+      "total": 2447,
+      "address": "gehbwf",
+      "payment": "cod",
+      "date": "2/9/2025, 11:09:10 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "9d0f",
+      "userId": "3d47",
+      "items": [
+        {
+          "id": "26",
+          "name": "Bamboo Chopping Board",
+          "price": 349,
+          "image": "/choppingboard.png",
+          "description": "Eco-friendly cutting board made from strong bamboo.",
+          "quantity": 1
+        },
+        {
+          "id": "21",
+          "name": "Bamboo Cutlery Set",
+          "price": 249,
+          "image": "/BambooCutlerySet.png",
+          "description": "Reusable bamboo fork, spoon, knife and chopsticks in a pouch.",
+          "quantity": 1
+        },
+        {
+          "id": "27",
+          "name": "Clay Cooking Pot",
+          "price": 699,
+          "image": "/ClayCookingPot.jpg",
+          "description": "Traditional clay pot for natural and healthy cooking.",
+          "quantity": 1
+        },
+        {
+          "id": "28",
+          "name": "Organic Cotton Kitchen Towels",
+          "price": 249,
+          "image": "/kitchentowel.png",
+          "description": "Reusable kitchen towels made from 100% organic cotton.",
+          "quantity": 1
+        },
+        {
+          "id": "23",
+          "name": "Compostable Food Wrap",
+          "price": 299,
+          "image": "/foodwrap.png",
+          "description": "Beeswax-coated wrap to store food without plastic.",
+          "quantity": 1
+        },
+        {
+          "id": "22",
+          "name": "Steel Water Bottle",
+          "price": 499,
+          "image": "/Stainless-Steel-Water-Bottle.png",
+          "description": "Durable stainless steel bottle that replaces single-use plastic.",
+          "quantity": 1
+        }
+      ],
+      "total": 2344,
+      "address": "rethgetyyxb",
+      "payment": "cod",
+      "date": "2/9/2025, 11:11:20 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "c596",
+      "userId": "dea6",
+      "items": [
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "image": "/herbalshampoobrush.png",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "quantity": 1
+        }
+      ],
+      "total": 249,
+      "address": "awsd",
+      "payment": "cod",
+      "date": "2/9/2025, 12:10:02 pm",
       "status": "Confirmed"
     }
   ]

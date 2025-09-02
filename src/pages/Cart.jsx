@@ -1,4 +1,3 @@
-// src/pages/CartPage.jsx
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { AuthContext } from "../context/AuthContext";
@@ -11,7 +10,6 @@ const CartPage = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // If cart is empty
   if (cart.length === 0) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -22,13 +20,12 @@ const CartPage = () => {
     );
   }
 
-  // ✅ Checkout logic with login check
   const handleCheckout = () => {
     if (!user) {
       toast.error("Please login to checkout");
       navigate("/login", { state: { from: "/cart" } });
     } else {
-      navigate("/order"); // Goes to Order Page
+      navigate("/order");
     }
   };
 

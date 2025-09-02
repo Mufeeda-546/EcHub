@@ -5,20 +5,22 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  // Load logged-in user from localStorage
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (savedUser) setUser(savedUser);
+    const savedToken = localStorage.getItem("authToken");
+    if (savedUser && savedToken) setUser(savedUser);
   }, []);
 
   const login = (userData) => {
     setUser(userData);
     localStorage.setItem("loggedInUser", JSON.stringify(userData));
+    localStorage.setItem("authToken", "dummy-token");
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("authToken");
   };
 
   const updateUser = (updatedUser) => {

@@ -104,7 +104,6 @@ const ProductManagementPage = () => {
 
   return (
     <div className="space-y-6 p-4">
-      {/* Product Form */}
       <div className="bg-white p-6 rounded shadow">
         <h3 className="text-xl font-semibold mb-4">
           {editing ? "Edit Product" : "Add New Product"}
@@ -170,7 +169,6 @@ const ProductManagementPage = () => {
         </form>
       </div>
 
-      {/* Search Bar */}
       <div className="flex justify-end">
         <input
           type="text"
@@ -181,7 +179,6 @@ const ProductManagementPage = () => {
         />
       </div>
 
-      {/* Products Table */}
       <div className="bg-white p-6 rounded shadow overflow-auto">
         <h3 className="text-xl font-semibold mb-4">All Products</h3>
         <table className="w-full text-left border-collapse">

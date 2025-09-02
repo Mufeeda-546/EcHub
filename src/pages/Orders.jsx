@@ -1,9 +1,9 @@
-// src/pages/OrdersPage.jsx
 import React, { useContext, useEffect } from "react";
 import { OrderContext } from "../context/ordercontext";
+import { toast } from "react-toastify";
 
 const OrdersPage = () => {
-  const { orders, fetchOrders } = useContext(OrderContext);
+  const { orders, fetchOrders, cancelOrder } = useContext(OrderContext);
 
   useEffect(() => {
     fetchOrders();
@@ -13,7 +13,6 @@ const OrdersPage = () => {
     return <h2 className="text-center mt-10">No orders found</h2>;
   }
 
-  // Function to return badge color based on status
   const getStatusBadgeClass = (status) => {
     switch (status.toLowerCase()) {
       case "delivered":
@@ -26,6 +25,15 @@ const OrdersPage = () => {
         return "bg-red-500 text-white";
       default:
         return "bg-gray-400 text-white";
+    }
+  };
+
+  const handleCancel = async (id) => {
+    const result = await cancelOrder(id);
+    if (result) {
+      toast.success("Order cancelled successfully!");
+    } else {
+      toast.error("Unable to cancel this order.");
     }
   };
 
@@ -60,6 +68,16 @@ const OrdersPage = () => {
           </ul>
 
           <h3 className="text-lg font-bold mt-3">Total: ₹{order.total}</h3>
+
+          {order.status.toLowerCase() !== "delivered" &&
+           order.status.toLowerCase() !== "cancelled" && (
+            <button
+              onClick={() => handleCancel(order.id)}
+              className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+            >
+              Cancel Order
+            </button>
+          )}
         </div>
       ))}
     </div>

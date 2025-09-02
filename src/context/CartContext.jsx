@@ -1,15 +1,12 @@
-// src/context/CartContext.jsx
 import React, { createContext, useState, useEffect, useContext } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "./AuthContext";
-import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const { user } = useContext(AuthContext);
   const [cart, setCart] = useState([]);
-  
 
   useEffect(() => {
     if (user) {
@@ -31,25 +28,20 @@ export function CartProvider({ children }) {
   const addToCart = (item) => {
     if (!user) {
       toast.error("Please login to add items to your cart");
-
-    ;
-
       return false;
     }
 
     const existing = cart.find((i) => i.id === item.id);
-    let updated;
+
     if (existing) {
-      updated = cart.map((i) =>
-        i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-      );
-      toast.info("Item quantity updated");
+      toast.info("Item is already in your cart");
+      return false;
     } else {
-      updated = [...cart, { ...item, quantity: 1 }];
+      const updated = [...cart, { ...item, quantity: 1 }];
+      saveCart(updated);
       toast.success("Item added to cart");
+      return true;
     }
-    saveCart(updated);
-    return true;
   };
 
   const removeFromCart = (id) => {

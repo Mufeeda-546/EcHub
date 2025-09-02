@@ -17,7 +17,6 @@ const UserManagementPage = () => {
   });
   const [editing, setEditing] = useState(false);
 
-  // Fetch all users
   const fetchUsers = async () => {
     try {
       const res = await fetch("http://localhost:3000/users");
@@ -35,12 +34,10 @@ const UserManagementPage = () => {
     fetchUsers();
   }, []);
 
-  // Handle form input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle search input
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchTerm(value);
@@ -56,7 +53,6 @@ const UserManagementPage = () => {
     );
   };
 
-  // Add or Update user
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -89,13 +85,11 @@ const UserManagementPage = () => {
     }
   };
 
-  // Edit user
   const handleEdit = (user) => {
     setFormData(user);
     setEditing(true);
   };
 
-  // Delete user
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to remove this user?")) return;
     try {
@@ -106,7 +100,6 @@ const UserManagementPage = () => {
     }
   };
 
-  // Block/Unblock user
   const handleBlockToggle = async (user) => {
     const updatedStatus = user.status === "active" ? "blocked" : "active";
     try {
@@ -126,7 +119,6 @@ const UserManagementPage = () => {
 
   return (
     <div className="space-y-6 p-4">
-      {/* User Form */}
       <div className="bg-white p-6 rounded shadow">
         <h3 className="text-xl font-semibold mb-4">
           {editing ? "Edit User" : "Add New User"}
@@ -193,7 +185,6 @@ const UserManagementPage = () => {
         </form>
       </div>
 
-      {/* Search Bar */}
       <div className="flex justify-end">
         <input
           type="text"
@@ -204,7 +195,6 @@ const UserManagementPage = () => {
         />
       </div>
 
-      {/* Users Table */}
       <div className="bg-white p-6 rounded shadow overflow-auto">
         <h3 className="text-xl font-semibold mb-4">All Users</h3>
         <table className="w-full text-left border-collapse">

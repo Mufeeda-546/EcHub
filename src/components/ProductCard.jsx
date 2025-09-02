@@ -6,12 +6,12 @@ import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { CartContext } from "../context/CartContext";
 import { toast } from "react-toastify";
 import { WishlistContext } from "../context/wishlistcontext";
-import { AuthContext } from "../context/AuthContext"; // ✅ import auth
+import { AuthContext } from "../context/AuthContext";
 
 const ProductCard = ({ id, name, price, image, description }) => {
   const { addToCart } = useContext(CartContext);
   const { wishlist, toggleWishlist } = useContext(WishlistContext);
-  const { user } = useContext(AuthContext); // ✅ get logged in user
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -19,18 +19,16 @@ const ProductCard = ({ id, name, price, image, description }) => {
 
   const handleAddToCart = (item) => {
     const success = addToCart(item);
-    if (!success) {
+    if (!success && !user) {
       navigate("/login", { state: { from: location.pathname } });
     }
   };
 
-  // ✅ handle wishlist click
   const handleWishlistClick = () => {
     if (!user) {
-     toast.info("you haven't log in yet")
+      toast.info("you haven't log in yet");
       navigate("/login", { state: { from: location.pathname } });
     } else {
-      // logged in → toggle wishlist
       toggleWishlist({ id, name, price, image, description });
     }
   };
@@ -50,7 +48,6 @@ const ProductCard = ({ id, name, price, image, description }) => {
         <p className="text-green-600 font-medium mt-1">₹{price}</p>
       </Link>
 
-      {/* ✅ Wishlist button with login check */}
       <button
         onClick={handleWishlistClick}
         className="absolute top-2 right-2 text-xl text-red-500 transition-transform transform hover:scale-125"

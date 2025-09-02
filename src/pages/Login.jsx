@@ -36,7 +36,7 @@ export default function Login() {
         return;
       }
 
-      login(foundUser); // Save to context & localStorage
+      login(foundUser); 
 
       alert("Login successful!");
 

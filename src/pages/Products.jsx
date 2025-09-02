@@ -5,7 +5,7 @@ import axios from "axios";
 import ProductCard from "../components/ProductCard";
 
 const Products = ({ wishlist, setWishlist }) => {
-  const { name } = useParams(); // Get category from URL (if any)
+  const { name } = useParams(); 
 
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -32,7 +32,6 @@ const Products = ({ wishlist, setWishlist }) => {
         ];
         setCategories(uniqueCategories);
 
-        // If coming from CategorySection, set filter
         if (name) {
           setSelectedCategory(name);
         }

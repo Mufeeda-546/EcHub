@@ -39,7 +39,6 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
@@ -48,14 +47,12 @@ const App = () => {
         <Route path="/products/:id" element={<Productdetail />} />
         <Route path="/wishlist" element={<Wishlist />} />
 
-        {/* Protected Routes */}
         <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
         <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} />
         <Route path="/order" element={<ProtectedRoute><OrderPage /></ProtectedRoute>} />
         <Route path="/order-success" element={<ProtectedRoute><OrderSuccessPage /></ProtectedRoute>} />
         <Route path="/orders" element={<ProtectedRoute><OrdersPage /></ProtectedRoute>} />
 
-        {/* Admin Routes */}
         <Route path="/admin" element={<AdminRoute><AdminLayout /></AdminRoute>}>
           <Route index element={<DashboardPage />} />
           <Route path="users" element={<UserManagementPage />} />
