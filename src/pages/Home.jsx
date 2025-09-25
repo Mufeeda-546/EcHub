@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Herosection from '../components/Herosection ';
 import FooterSection from '../components/Footer';
-import FeaturedCollection from '../components/featuredcollection';
+import FeaturedCollection from '../components/FeaturedCollection';
 import axios from 'axios';
 import CategorySection from '../components/Categorysection';
 
