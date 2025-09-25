@@ -12,7 +12,7 @@ export function OrderProvider({ children }) {
   const fetchOrders = async () => {
     if (!user) return;
     try {
-      const res = await fetch(`http://localhost:3000/orders?userId=${user.id}`);
+      const res = await fetch(`https://backend-w1xu.onrender.com/orders?userId=${user.id}`);
       const data = await res.json();
       setOrders(data);
     } catch (error) {
@@ -38,7 +38,7 @@ export function OrderProvider({ children }) {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/orders", {
+      const res = await fetch("https://backend-w1xu.onrender.com/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newOrder),
@@ -66,7 +66,7 @@ export function OrderProvider({ children }) {
 
       const updatedOrder = { ...order, status: "cancelled" };
 
-      const res = await fetch(`http://localhost:3000/orders/${orderId}`, {
+      const res = await fetch(`https://backend-w1xu.onrender.com/orders/${orderId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedOrder),

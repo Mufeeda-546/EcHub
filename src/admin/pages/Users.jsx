@@ -21,7 +21,7 @@ const UserManagementPage = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://localhost:3000/users");
+      const res = await fetch("https://backend-w1xu.onrender.com/users");
       const data = await res.json();
       setUsers(data);
       setFilteredUsers(data);
@@ -57,13 +57,13 @@ const UserManagementPage = () => {
     e.preventDefault();
     try {
       if (editingUser) {
-        await fetch(`http://localhost:3000/users/${formData.id}`, {
+        await fetch(`https://backend-w1xu.onrender.com/users/${formData.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
       } else {
-        await fetch("http://localhost:3000/users", {
+        await fetch("https://backend-w1xu.onrender.com/users", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ...formData, id: Date.now().toString() }),
@@ -87,7 +87,7 @@ const UserManagementPage = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to remove this user?")) return;
     try {
-      await fetch(`http://localhost:3000/users/${id}`, { method: "DELETE" });
+      await fetch(`https://backend-w1xu.onrender.com/users/${id}`, { method: "DELETE" });
       fetchUsers();
     } catch (err) {
       setError("Failed to delete user");
@@ -97,7 +97,7 @@ const UserManagementPage = () => {
   const handleBlockToggle = async (user) => {
     const updatedStatus = user.status === "active" ? "blocked" : "active";
     try {
-      await fetch(`http://localhost:3000/users/${user.id}`, {
+      await fetch(`https://backend-w1xu.onrender.com/users/${user.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: updatedStatus }),

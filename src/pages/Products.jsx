@@ -19,7 +19,7 @@ const Products = ({ wishlist, setWishlist }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/products");
+        const { data } = await axios.get("https://backend-w1xu.onrender.com/products");
         setProducts(data || []);
         setFilteredProducts(data || []);
 

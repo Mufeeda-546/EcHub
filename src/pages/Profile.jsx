@@ -27,7 +27,7 @@ const ProfilePage = () => {
         password: newPassword ? newPassword : user.password,
       };
 
-      await axios.put(`http://localhost:3000/users/${user.id}`, updatedUser);
+      await axios.put(`https://backend-w1xu.onrender.com/users/${user.id}`, updatedUser);
 
       updateUser(updatedUser);
 

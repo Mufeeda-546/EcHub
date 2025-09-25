@@ -6,7 +6,7 @@ const CategorySection = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/categories")
+    fetch("https://backend-w1xu.onrender.com/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);

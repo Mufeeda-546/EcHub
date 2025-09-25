@@ -21,7 +21,7 @@ export default function Login() {
 
     try {
       const res = await axios.get(
-        `http://localhost:3000/users?email=${encodeURIComponent(
+        `https://backend-w1xu.onrender.com/users?email=${encodeURIComponent(
           email.trim()
         )}&password=${encodeURIComponent(password.trim())}`
       );

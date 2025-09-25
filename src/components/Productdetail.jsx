@@ -23,7 +23,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (!product) {
-      fetch(`http://localhost:3000/products/${id}`)
+      fetch(`https://backend-w1xu.onrender.com/products/${id}`)
         .then(res => {
           if (!res.ok) throw new Error("Failed to fetch product");
           return res.json();

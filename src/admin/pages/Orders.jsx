@@ -22,8 +22,8 @@ const OrderManagementPage = () => {
   const fetchOrders = async () => {
     try {
       const [ordersRes, usersRes] = await Promise.all([
-        fetch("http://localhost:3000/orders"),
-        fetch("http://localhost:3000/users"),
+        fetch("https://backend-w1xu.onrender.com/orders"),
+        fetch("https://backend-w1xu.onrender.com/users"),
       ]);
       const [ordersData, usersData] = await Promise.all([
         ordersRes.json(),
@@ -76,7 +76,7 @@ const OrderManagementPage = () => {
       const orderToUpdate = orders.find((o) => o.id === orderId);
       if (!orderToUpdate) return;
       const updatedOrder = { ...orderToUpdate, status: newStatus };
-      await fetch(`http://localhost:3000/orders/${orderId}`, {
+      await fetch(`https://backend-w1xu.onrender.com/orders/${orderId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedOrder),

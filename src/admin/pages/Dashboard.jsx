@@ -90,10 +90,10 @@ const DashboardPage = () => {
     const fetchData = async () => {
       try {
         const [usersRes, ordersRes, productsRes, categoriesRes] = await Promise.all([
-          fetch("http://localhost:3000/users"),
-          fetch("http://localhost:3000/orders"),
-          fetch("http://localhost:3000/products"),
-          fetch("http://localhost:3000/categories"),
+          fetch("https://backend-w1xu.onrender.com/users"),
+          fetch("https://backend-w1xu.onrender.com/orders"),
+          fetch("https://backend-w1xu.onrender.com/products"),
+          fetch("https://backend-w1xu.onrender.com/categories"),
         ]);
 
         const [usersData, ordersData, productsData, categoriesData] = await Promise.all([

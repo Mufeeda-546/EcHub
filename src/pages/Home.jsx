@@ -11,7 +11,7 @@ const Home = () => {
   const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/products")
+    axios.get("https://backend-w1xu.onrender.com/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);

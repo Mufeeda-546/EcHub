@@ -22,7 +22,7 @@ const ProductManagementPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:3000/products");
+      const res = await fetch("https://backend-w1xu.onrender.com/products");
       const data = await res.json();
       setProducts(data);
       setFilteredProducts(data);
@@ -57,13 +57,13 @@ const ProductManagementPage = () => {
     e.preventDefault();
     try {
       if (editingProduct) {
-        await fetch(`http://localhost:3000/products/${formData.id}`, {
+        await fetch(`https://backend-w1xu.onrender.com/products/${formData.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
       } else {
-        await fetch("http://localhost:3000/products", {
+        await fetch("https://backend-w1xu.onrender.com/products", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ...formData, id: Date.now().toString() }),
@@ -96,7 +96,7 @@ const ProductManagementPage = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
     try {
-      await fetch(`http://localhost:3000/products/${id}`, { method: "DELETE" });
+      await fetch(`https://backend-w1xu.onrender.com/products/${id}`, { method: "DELETE" });
       fetchProducts();
     } catch (err) {
       setError("Failed to delete product");

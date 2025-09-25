@@ -35,14 +35,14 @@ export default function SignUp() {
 
     try {
       const existing = await axios.get(
-        `http://localhost:3000/users?email=${encodeURIComponent(email.trim())}`
+        `https://backend-w1xu.onrender.com/users?email=${encodeURIComponent(email.trim())}`
       );
       if (existing.data.length > 0) {
         alert("Email already exists");
         return;
       }
 
-      await axios.post("http://localhost:3000/users", {
+      await axios.post("https://backend-w1xu.onrender.com/users", {
         name: name.trim(),
         email: email.trim(),
         password: password.trim(),
