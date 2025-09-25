@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { CartContext } from "../context/CartContext";
-import { toast } from "react-toastify";
 import { WishlistContext } from "../context/wishlistcontext";
 import { AuthContext } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
-const ProductCard = ({ id, name, price, image, description }) => {
+const ProductCard = ({ product }) => {
+  const { id, name, price, image, description } = product;
   const { addToCart } = useContext(CartContext);
   const { wishlist, toggleWishlist } = useContext(WishlistContext);
   const { user } = useContext(AuthContext);
@@ -17,8 +18,8 @@ const ProductCard = ({ id, name, price, image, description }) => {
 
   const isInWishlist = wishlist.some((item) => item.id === id);
 
-  const handleAddToCart = (item) => {
-    const success = addToCart(item);
+  const handleAddToCart = () => {
+    const success = addToCart(product);
     if (!success && !user) {
       navigate("/login", { state: { from: location.pathname } });
     }
@@ -26,40 +27,42 @@ const ProductCard = ({ id, name, price, image, description }) => {
 
   const handleWishlistClick = () => {
     if (!user) {
-      toast.info("you haven't log in yet");
+      toast.info("Please log in to manage wishlist.");
       navigate("/login", { state: { from: location.pathname } });
     } else {
-      toggleWishlist({ id, name, price, image, description });
+      toggleWishlist(product);
     }
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4 w-56 text-center m-2 relative transition-transform transform hover:scale-105">
-      <Link
-        to={`/products/${id}`}
-        state={{ product: { id, name, price, image, description } }}
-      >
+    <div className="relative flex flex-col bg-[#F2F5D9] rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-5">
+      <Link to={`/products/${id}`} state={{ product }} className="block mb-4 relative rounded-2xl overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="w-full h-40 object-cover rounded-lg"
+          className="w-full h-60 object-cover transition-transform duration-300 hover:scale-105 rounded-2xl"
         />
-        <h3 className="text-lg font-semibold mt-3 text-gray-800">{name}</h3>
-        <p className="text-green-600 font-medium mt-1">₹{price}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
       </Link>
 
-      <button
-        onClick={handleWishlistClick}
-        className="absolute top-2 right-2 text-xl text-red-500 transition-transform transform hover:scale-125"
-      >
-        <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} />
-      </button>
+      <div className="flex-1 flex flex-col justify-between">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">{name}</h3>
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3">{description}</p>
+
+        <div className="flex items-center justify-between">
+          <p className="text-green-700 font-bold text-xl">₹{price}</p>
+          <button
+            onClick={handleWishlistClick}
+            className="text-red-500 text-2xl hover:text-red-600 transition-colors"
+          >
+            <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} />
+          </button>
+        </div>
+      </div>
 
       <button
-        onClick={() =>
-          handleAddToCart({ id, name, price, image, description })
-        }
-        className="mt-3 w-full py-2 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition"
+        onClick={handleAddToCart}
+        className="mt-5 w-full py-3 bg-[#6B8E23] text-white rounded-2xl font-semibold shadow-md hover:bg-[#4A5D23] transition-colors"
       >
         Add to Cart
       </button>

@@ -14,19 +14,7 @@
       "email": "mufiaas@gmail.com",
       "password": "123",
       "role": "user",
-      "status": "active"
-    },
-    {
-      "id": "dea6",
-      "name": "Mufi",
-      "email": "mufiaashi546@gmail.com",
-      "password": "3465",
-      "phone": "12345677890",
-      "place": "keral",
-      "address": "fgv xggxb",
-      "pincode": "123456",
-      "role": "user",
-      "status": "active"
+      "status":"active"
     },
     {
       "id": "7a43",
@@ -50,7 +38,7 @@
       "address": "dgydhsujs",
       "pincode": "123434",
       "role": "user",
-      "status": "active"
+      "status": "blocked"
     },
     {
       "id": "22da",
@@ -82,6 +70,18 @@
       "email": "diyana@gmail.com",
       "phone": "13444456765",
       "address": "drsfretgydg",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "8594",
+      "name": "mohammed ameen",
+      "email": "ameen@gmail.com",
+      "password": "123",
+      "phone": "1234568",
+      "place": "asdfghjkjhgfds",
+      "address": "fgv xggxb",
+      "pincode": "123456",
       "role": "user",
       "status": "active"
     }
@@ -838,27 +838,8 @@
   ],
   "orders": [
     {
-      "id": "6aa7",
-      "userId": "6383",
-      "items": [
-        {
-          "id": "2",
-          "name": "Refillable Deodrant Stick",
-          "price": 299,
-          "image": "/refillabledeodrantstick.png",
-          "description": "Aluminium case,refillable core for zero waste",
-          "quantity": 2
-        }
-      ],
-      "total": 598,
-      "address": "gfg",
-      "payment": "cod",
-      "date": "29/8/2025, 2:44:50 pm",
-      "status": "Confirmed"
-    },
-    {
       "id": "3d8d",
-      "userId": "dea6",
+      "userId": null,
       "items": [
         {
           "id": "3",
@@ -905,7 +886,7 @@
       "address": "defrgts",
       "payment": "cod",
       "date": "2/9/2025, 10:25:36 am",
-      "status": "Confirmed"
+      "status": "shipped"
     },
     {
       "id": "f8f5",
@@ -1131,7 +1112,7 @@
       "address": "eddynjnghjk",
       "payment": "cod",
       "date": "2/9/2025, 11:06:01 am",
-      "status": "Confirmed"
+      "status": "pending"
     },
     {
       "id": "fab9",
@@ -1225,11 +1206,11 @@
       "address": "rethgetyyxb",
       "payment": "cod",
       "date": "2/9/2025, 11:11:20 am",
-      "status": "Confirmed"
+      "status": "delivered"
     },
     {
       "id": "c596",
-      "userId": "dea6",
+      "userId": null,
       "items": [
         {
           "id": "4",
@@ -1244,6 +1225,607 @@
       "address": "awsd",
       "payment": "cod",
       "date": "2/9/2025, 12:10:02 pm",
+      "status": "Confirmed"
+    },
+    {
+      "id": "7005",
+      "userId": null,
+      "items": [
+        {
+          "id": "32",
+          "name": "Hemp Backpack",
+          "price": 1499,
+          "currency": "INR",
+          "image": "/HempBackpack.webp",
+          "category": "Fashion & Accessories",
+          "description": "Durable eco-friendly backpack made from natural hemp fiber.",
+          "stock": 1,
+          "material": [
+            "Hemp"
+          ],
+          "ecoScore": 95,
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "image": "/herbalshampoobrush.png",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "quantity": 1
+        }
+      ],
+      "total": 1748,
+      "address": "gredsafgh",
+      "payment": "cod",
+      "date": "2/9/2025, 2:33:58 pm",
+      "status": "Confirmed"
+    },
+    {
+      "id": "9adb",
+      "userId": null,
+      "items": [
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "image": "/herbalshampoobrush.png",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "quantity": 1
+        }
+      ],
+      "total": 249,
+      "address": "fetghyj",
+      "payment": "cod",
+      "date": "2/9/2025, 4:07:01 pm",
+      "status": "Confirmed"
+    },
+    {
+      "id": "c085",
+      "userId": null,
+      "items": [
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "image": "/herbalshampoobrush.png",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "quantity": 1
+        }
+      ],
+      "total": 249,
+      "address": "dfgbnnbvcx",
+      "payment": "cod",
+      "date": "2/9/2025, 5:45:19 pm",
+      "status": "pending"
+    },
+    {
+      "id": "bd8f",
+      "userId": null,
+      "items": [
+        {
+          "id": "8",
+          "name": "Reusable Makeup Remover Pads",
+          "price": 199,
+          "image": "/makeuprmovablepads.webp",
+          "description": "Washable organic cotton pads for makeup removal.",
+          "quantity": 1
+        },
+        {
+          "id": "7",
+          "name": "Organic Lip Balm ",
+          "price": 149,
+          "image": "/organiclipblam.png",
+          "description": "Moisturizing balm in compostable paper tube",
+          "quantity": 1
+        },
+        {
+          "id": "37",
+          "name": "Bamboo Sunglasses",
+          "price": 899,
+          "image": "/bamboosunglasses.png",
+          "description": "Trendy sunglasses with frames made from bamboo.",
+          "quantity": 1
+        },
+        {
+          "id": "39",
+          "name": "Recycled Polyester Jacket",
+          "price": 2499,
+          "image": "/recycledpolysterjacket.png",
+          "description": "Lightweight jacket made from recycled polyester materials.",
+          "quantity": 1
+        }
+      ],
+      "total": 3746,
+      "address": "sdfghjktrew",
+      "payment": "cod",
+      "date": "2/9/2025, 5:46:16 pm",
+      "status": "shipped"
+    },
+    {
+      "id": "4715",
+      "userId": "2ed0",
+      "items": [
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "image": "/toothbrush.png",
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 1
+        }
+      ],
+      "total": 528,
+      "address": "aesrtdtfy",
+      "payment": "card",
+      "date": "3/9/2025, 6:15:31 pm",
+      "status": "shipped"
+    },
+    {
+      "id": "2877",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "image": "/toothbrush.png",
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "quantity": 1
+        },
+        {
+          "id": "32",
+          "name": "Hemp Backpack",
+          "price": 1499,
+          "image": "/HempBackpack.webp",
+          "description": "Durable eco-friendly backpack made from natural hemp fiber.",
+          "quantity": 1
+        },
+        {
+          "id": "44",
+          "name": "Recycled Nylon Backpack",
+          "price": 1799,
+          "image": "/nylonbackpack.png",
+          "description": "Durable and lightweight backpack made from recycled nylon.",
+          "quantity": 1
+        },
+        {
+          "id": "39",
+          "name": "Recycled Polyester Jacket",
+          "price": 2499,
+          "image": "/recycledpolysterjacket.png",
+          "description": "Lightweight jacket made from recycled polyester materials.",
+          "quantity": 1
+        },
+        {
+          "id": "37",
+          "name": "Bamboo Sunglasses",
+          "price": 899,
+          "image": "/bamboosunglasses.png",
+          "description": "Trendy sunglasses with frames made from bamboo.",
+          "quantity": 1
+        },
+        {
+          "id": "29",
+          "name": "Recycled Steel Lunch Box",
+          "price": 799,
+          "image": "/steellunchbox.png",
+          "description": "Durable steel lunchbox crafted from recycled materials.",
+          "quantity": 1
+        }
+      ],
+      "total": 7624,
+      "address": "qwertyuiofdsnbvcx",
+      "payment": "cod",
+      "date": "5/9/2025, 10:29:59 pm",
+      "status": "Confirmed"
+    },
+    {
+      "id": "551f",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "2",
+          "name": "Refillable Deodrant Stick",
+          "price": 299,
+          "image": "/refillabledeodrantstick.png",
+          "description": "Aluminium case,refillable core for zero waste",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "currency": "INR",
+          "image": "/herbalshampoobrush.png",
+          "category": "Personal Care",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "stock": 1,
+          "material": [
+            "Neem",
+            "Aloe Vera",
+            "Coconut Oil"
+          ],
+          "ecoscore": 93,
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Natural Loofah",
+          "price": 99,
+          "currency": "INR",
+          "image": "/loofah.png",
+          "category": "Personal Care",
+          "description": "Made from dried gourd,100% compostable",
+          "stock": 1,
+          "material": [
+            "Plant Fiber"
+          ],
+          "ecoscore": 85,
+          "quantity": 1
+        },
+        {
+          "id": "8",
+          "name": "Reusable Makeup Remover Pads",
+          "price": 199,
+          "currency": "INR",
+          "image": "/makeuprmovablepads.webp",
+          "category": "Personal Care",
+          "description": "Washable organic cotton pads for makeup removal.",
+          "stock": 1,
+          "materials": [
+            "Organic Cotton"
+          ],
+          "ecoScore": 88,
+          "quantity": 1
+        },
+        {
+          "id": "9",
+          "name": "Plant-Based Dental Floss",
+          "price": 179,
+          "currency": "INR",
+          "image": "/dentalfloss.jpg",
+          "category": "Personal Care",
+          "description": "Corn fiber dental floss in reusable glass jar.",
+          "stock": 1,
+          "materials": [
+            "Corn Fiber",
+            "Glass"
+          ],
+          "ecoScore": 91,
+          "quantity": 1
+        },
+        {
+          "id": "10",
+          "name": "Aloe Vera Gel",
+          "price": 229,
+          "currency": "INR",
+          "image": "/aloeveraagel.jpg",
+          "category": "Personal Care",
+          "description": "Pure aloe vera gel packed in a recyclable container.",
+          "stock": 1,
+          "materials": [
+            "Aloe Vera"
+          ],
+          "ecoScore": 94,
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "currency": "INR",
+          "image": "/toothbrush.png",
+          "category": "Personal Care",
+          "stock": 1,
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "material": [
+            "bamboo",
+            "Plant-based nylon"
+          ],
+          "ecoscore": 86,
+          "quantity": 1
+        }
+      ],
+      "total": 1782,
+      "address": "asdfghj",
+      "payment": "cod",
+      "date": "25/9/2025, 6:56:51 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "1b41",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "2",
+          "name": "Refillable Deodrant Stick",
+          "price": 299,
+          "image": "/refillabledeodrantstick.png",
+          "description": "Aluminium case,refillable core for zero waste",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "image": "/cottonfacetowel.png",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "currency": "INR",
+          "image": "/herbalshampoobrush.png",
+          "category": "Personal Care",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "stock": 1,
+          "material": [
+            "Neem",
+            "Aloe Vera",
+            "Coconut Oil"
+          ],
+          "ecoscore": 93,
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Natural Loofah",
+          "price": 99,
+          "currency": "INR",
+          "image": "/loofah.png",
+          "category": "Personal Care",
+          "description": "Made from dried gourd,100% compostable",
+          "stock": 1,
+          "material": [
+            "Plant Fiber"
+          ],
+          "ecoscore": 85,
+          "quantity": 1
+        },
+        {
+          "id": "8",
+          "name": "Reusable Makeup Remover Pads",
+          "price": 199,
+          "currency": "INR",
+          "image": "/makeuprmovablepads.webp",
+          "category": "Personal Care",
+          "description": "Washable organic cotton pads for makeup removal.",
+          "stock": 1,
+          "materials": [
+            "Organic Cotton"
+          ],
+          "ecoScore": 88,
+          "quantity": 1
+        },
+        {
+          "id": "9",
+          "name": "Plant-Based Dental Floss",
+          "price": 179,
+          "currency": "INR",
+          "image": "/dentalfloss.jpg",
+          "category": "Personal Care",
+          "description": "Corn fiber dental floss in reusable glass jar.",
+          "stock": 1,
+          "materials": [
+            "Corn Fiber",
+            "Glass"
+          ],
+          "ecoScore": 91,
+          "quantity": 1
+        },
+        {
+          "id": "10",
+          "name": "Aloe Vera Gel",
+          "price": 229,
+          "currency": "INR",
+          "image": "/aloeveraagel.jpg",
+          "category": "Personal Care",
+          "description": "Pure aloe vera gel packed in a recyclable container.",
+          "stock": 1,
+          "materials": [
+            "Aloe Vera"
+          ],
+          "ecoScore": 94,
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "currency": "INR",
+          "image": "/toothbrush.png",
+          "category": "Personal Care",
+          "stock": 1,
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "material": [
+            "bamboo",
+            "Plant-based nylon"
+          ],
+          "ecoscore": 86,
+          "quantity": 1
+        }
+      ],
+      "total": 1782,
+      "address": "asdfghj",
+      "payment": "cod",
+      "date": "25/9/2025, 6:56:52 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "cc84",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "3",
+          "name": "Organic Cotton Face Towels",
+          "price": 399,
+          "currency": "INR",
+          "image": "/cottonfacetowel.png",
+          "category": "Personal Care",
+          "description": "Soft,durable,GOTS certified organic cotton towels.",
+          "stock": 1,
+          "material": [
+            "Organic Cotton"
+          ],
+          "ecoscore": 89,
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "currency": "INR",
+          "image": "/herbalshampoobrush.png",
+          "category": "Personal Care",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "stock": 1,
+          "material": [
+            "Neem",
+            "Aloe Vera",
+            "Coconut Oil"
+          ],
+          "ecoscore": 93,
+          "quantity": 1
+        }
+      ],
+      "total": 648,
+      "address": "asdfg",
+      "payment": "cod",
+      "date": "25/9/2025, 7:03:16 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "6ba4",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "currency": "INR",
+          "image": "/toothbrush.png",
+          "category": "Personal Care",
+          "stock": 1,
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "material": [
+            "bamboo",
+            "Plant-based nylon"
+          ],
+          "ecoscore": 86,
+          "quantity": 1
+        }
+      ],
+      "total": 129,
+      "address": "asdfgh",
+      "payment": "cod",
+      "date": "25/9/2025, 7:12:57 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "cf65",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "4",
+          "name": "Herbal Shampoo Brush",
+          "price": 249,
+          "currency": "INR",
+          "image": "/herbalshampoobrush.png",
+          "category": "Personal Care",
+          "description": "Plastic Free shampoo bar with natural herbs.",
+          "stock": 1,
+          "material": [
+            "Neem",
+            "Aloe Vera",
+            "Coconut Oil"
+          ],
+          "ecoscore": 93,
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "currency": "INR",
+          "image": "/toothbrush.png",
+          "category": "Personal Care",
+          "stock": 1,
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "material": [
+            "bamboo",
+            "Plant-based nylon"
+          ],
+          "ecoscore": 86,
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Refillable Deodrant Stick",
+          "price": 299,
+          "currency": "INR",
+          "image": "/refillabledeodrantstick.png",
+          "category": "Personal Care",
+          "description": "Aluminium case,refillable core for zero waste",
+          "stock": 1,
+          "material": [
+            "Aluminium",
+            "Organic Oils"
+          ],
+          "ecoscore": 92,
+          "quantity": 1
+        }
+      ],
+      "total": 677,
+      "address": "dfghj",
+      "payment": "cod",
+      "date": "25/9/2025, 7:17:30 am",
+      "status": "Confirmed"
+    },
+    {
+      "id": "7133",
+      "userId": "8594",
+      "items": [
+        {
+          "id": "1",
+          "name": "Bamboo toothbrush",
+          "price": 129,
+          "currency": "INR",
+          "image": "/toothbrush.png",
+          "category": "Personal Care",
+          "stock": 1,
+          "description": "Biodegradable bamboo handle with plant-based bristles.",
+          "material": [
+            "bamboo",
+            "Plant-based nylon"
+          ],
+          "ecoscore": 86,
+          "userId": "8594",
+          "quantity": 1
+        }
+      ],
+      "total": 129,
+      "address": "kalathingalthodi,chappanangadi,p.o,ia kottakkal",
+      "payment": "cod",
+      "date": "25/9/2025, 7:21:54 am",
       "status": "Confirmed"
     }
   ]

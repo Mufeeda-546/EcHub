@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 
 const ProductManagementPage = () => {
   const [products, setProducts] = useState([]);
@@ -6,6 +7,8 @@ const ProductManagementPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [editingProduct, setEditingProduct] = useState(null);
   const [formData, setFormData] = useState({
     id: "",
     name: "",
@@ -16,7 +19,6 @@ const ProductManagementPage = () => {
     description: "",
     image: "",
   });
-  const [editing, setEditing] = useState(false);
 
   const fetchProducts = async () => {
     try {
@@ -54,7 +56,7 @@ const ProductManagementPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (editing) {
+      if (editingProduct) {
         await fetch(`http://localhost:3000/products/${formData.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -77,7 +79,8 @@ const ProductManagementPage = () => {
         description: "",
         image: "",
       });
-      setEditing(false);
+      setEditingProduct(null);
+      setShowModal(false);
       fetchProducts();
     } catch (err) {
       setError("Failed to save product");
@@ -86,7 +89,8 @@ const ProductManagementPage = () => {
 
   const handleEdit = (product) => {
     setFormData(product);
-    setEditing(true);
+    setEditingProduct(product);
+    setShowModal(true);
   };
 
   const handleDelete = async (id) => {
@@ -103,104 +107,48 @@ const ProductManagementPage = () => {
   if (error) return <p className="p-4 text-red-500">{error}</p>;
 
   return (
-    <div className="space-y-6 p-4">
-      <div className="bg-white p-6 rounded shadow">
-        <h3 className="text-xl font-semibold mb-4">
-          {editing ? "Edit Product" : "Add New Product"}
-        </h3>
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            placeholder="Product Name"
-            onChange={handleChange}
-            className="border p-2 rounded"
-            required
-          />
-          <input
-            type="number"
-            name="price"
-            value={formData.price}
-            placeholder="Price"
-            onChange={handleChange}
-            className="border p-2 rounded"
-            required
-          />
-          <input
-            type="text"
-            name="category"
-            value={formData.category}
-            placeholder="Category"
-            onChange={handleChange}
-            className="border p-2 rounded"
-            required
-          />
-          <input
-            type="number"
-            name="stock"
-            value={formData.stock}
-            placeholder="Stock Quantity"
-            onChange={handleChange}
-            className="border p-2 rounded"
-            required
-          />
-          <input
-            type="text"
-            name="image"
-            value={formData.image}
-            placeholder="Image URL"
-            onChange={handleChange}
-            className="border p-2 rounded col-span-2"
-          />
-          <textarea
-            name="description"
-            value={formData.description}
-            placeholder="Description"
-            onChange={handleChange}
-            className="border p-2 rounded col-span-2"
-          />
-          <button
-            type="submit"
-            className="col-span-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
-            {editing ? "Update Product" : "Add Product"}
-          </button>
-        </form>
+    <div className="p-4 space-y-6">
+      <div className="flex justify-between items-center">
+        <button
+          onClick={() => setShowModal(true)}
+          className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          <FaPlus /> Add Product
+        </button>
       </div>
 
-      <div className="flex justify-end">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearch}
-          placeholder="Search by name or category"
-          className="border p-2 rounded w-full md:w-1/3 mb-2"
-        />
-      </div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleSearch}
+        placeholder="Search by name or category"
+        className="border p-2 rounded w-full md:w-1/3 mb-2"
+      />
 
       <div className="bg-white p-6 rounded shadow overflow-auto">
-        <h3 className="text-xl font-semibold mb-4">All Products</h3>
         <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="border-b">
+          <thead className="bg-gray-100">
+            <tr>
               <th className="p-2">ID</th>
               <th className="p-2">Image</th>
               <th className="p-2">Name</th>
               <th className="p-2">Price</th>
               <th className="p-2">Category</th>
               <th className="p-2">Stock</th>
-              <th className="p-2">Description</th>
               <th className="p-2">Actions</th>
             </tr>
           </thead>
           <tbody>
             {filteredProducts.map((product) => (
-              <tr key={product.id} className="border-b">
+              <tr key={product.id} className="hover:bg-gray-50 border-b">
                 <td className="p-2">{product.id}</td>
                 <td className="p-2">
                   {product.image ? (
-                    <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded" />
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-16 h-16 object-cover rounded"
+                    />
                   ) : (
                     "No Image"
                   )}
@@ -209,19 +157,18 @@ const ProductManagementPage = () => {
                 <td className="p-2">₹{product.price}</td>
                 <td className="p-2">{product.category}</td>
                 <td className="p-2">{product.stock}</td>
-                <td className="p-2">{product.description}</td>
-                <td className="p-2 space-x-2">
+                <td className="p-2 flex gap-2">
                   <button
-                    className="bg-yellow-500 text-white p-1 rounded hover:bg-yellow-600"
                     onClick={() => handleEdit(product)}
+                    className="bg-yellow-500 p-1 text-white rounded hover:bg-yellow-600"
                   >
-                    Edit
+                    <FaEdit />
                   </button>
                   <button
-                    className="bg-red-500 text-white p-1 rounded hover:bg-red-600"
                     onClick={() => handleDelete(product.id)}
+                    className="bg-red-500 p-1 text-white rounded hover:bg-red-600"
                   >
-                    Delete
+                    <FaTrash />
                   </button>
                 </td>
               </tr>
@@ -229,6 +176,87 @@ const ProductManagementPage = () => {
           </tbody>
         </table>
       </div>
+
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded shadow w-full max-w-xl">
+            <h3 className="text-xl font-semibold mb-4">
+              {editingProduct ? "Edit Product" : "Add Product"}
+            </h3>
+            <form
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            >
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                placeholder="Product Name"
+                onChange={handleChange}
+                className="border p-2 rounded"
+                required
+              />
+              <input
+                type="number"
+                name="price"
+                value={formData.price}
+                placeholder="Price"
+                onChange={handleChange}
+                className="border p-2 rounded"
+                required
+              />
+              <input
+                type="text"
+                name="category"
+                value={formData.category}
+                placeholder="Category"
+                onChange={handleChange}
+                className="border p-2 rounded"
+                required
+              />
+              <input
+                type="number"
+                name="stock"
+                value={formData.stock}
+                placeholder="Stock Quantity"
+                onChange={handleChange}
+                className="border p-2 rounded"
+                required
+              />
+              <input
+                type="text"
+                name="image"
+                value={formData.image}
+                placeholder="Image URL"
+                onChange={handleChange}
+                className="border p-2 rounded col-span-2"
+              />
+              <textarea
+                name="description"
+                value={formData.description}
+                placeholder="Description"
+                onChange={handleChange}
+                className="border p-2 rounded col-span-2"
+              />
+              <div className="col-span-2 flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => { setShowModal(false); setEditingProduct(null); }}
+                  className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                >
+                  {editingProduct ? "Update Product" : "Add Product"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

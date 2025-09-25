@@ -63,24 +63,93 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded shadow-md w-96">
-        <h2 className="text-2xl font-bold text-green-700 text-center mb-4">Sign Up</h2>
-        <form onSubmit={handleSignup} className="flex flex-col">
-          <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="text" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="text" placeholder="Place" value={place} onChange={(e) => setPlace(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <input type="text" placeholder="Pincode" value={pincode} onChange={(e) => setPincode(e.target.value)} className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"/>
-          <button type="submit" className="bg-green-600 text-white py-2 rounded hover:bg-green-700">Sign Up</button>
-        </form>
-        <p className="text-center mt-4 text-sm">
-          Already have an account?{" "}
-          <span onClick={() => navigate("/login")} className="text-green-600 cursor-pointer hover:underline">Login</span>
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-tr from-green-50 to-green-100">
+      <div className="bg-white p-8 rounded-3xl shadow-2xl w-96">
+        <h2 className="text-3xl font-extrabold text-green-700 text-center mb-6">
+          Create Account
+        </h2>
+
+        <p className="text-center text-gray-500 mb-6">
+          Fill in the information to sign up
         </p>
+
+        <form onSubmit={handleSignup} className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="text"
+            placeholder="Phone Number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="text"
+            placeholder="Place"
+            value={place}
+            onChange={(e) => setPlace(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="text"
+            placeholder="Address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+          <input
+            type="text"
+            placeholder="Pincode"
+            value={pincode}
+            onChange={(e) => setPincode(e.target.value)}
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          />
+
+          <button
+            type="submit"
+            className="bg-green-600 text-white py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <div className="text-center mt-6">
+          <p className="text-gray-500 text-sm">
+            Already have an account?{" "}
+            <span
+              onClick={() => navigate("/login")}
+              className="text-green-600 font-medium cursor-pointer hover:underline"
+            >
+              Login
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -21,7 +21,9 @@ export default function Login() {
 
     try {
       const res = await axios.get(
-        `http://localhost:3000/users?email=${encodeURIComponent(email.trim())}&password=${encodeURIComponent(password.trim())}`
+        `http://localhost:3000/users?email=${encodeURIComponent(
+          email.trim()
+        )}&password=${encodeURIComponent(password.trim())}`
       );
 
       if (res.data.length === 0) {
@@ -36,13 +38,11 @@ export default function Login() {
         return;
       }
 
-      login(foundUser); 
-
+      login(foundUser);
       alert("Login successful!");
 
       if (foundUser.role === "admin") navigate("/admin");
       else navigate(redirectPath, { replace: true });
-
     } catch (error) {
       console.error(error);
       alert("Something went wrong");
@@ -50,37 +50,50 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded shadow-md w-96">
-        <h2 className="text-2xl font-bold text-green-700 text-center mb-4">Login</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-tr from-green-50 to-green-100">
+      <div className="bg-white p-8 rounded-3xl shadow-2xl w-96 transform transition-transform duration-500 hover:scale-105">
+        <h2 className="text-3xl font-extrabold text-green-700 text-center mb-6">
+          Welcome Back
+        </h2>
+
+        <p className="text-center text-gray-500 mb-6">
+          Enter your credentials to access your account
+        </p>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
           />
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="border px-3 py-2 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
           />
-          <button type="submit" className="bg-green-600 text-white py-2 rounded hover:bg-green-700">
+          <button
+            type="submit"
+            className="bg-green-600 text-white py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
+          >
             Login
           </button>
         </form>
-        <p className="text-center mt-4 text-sm">
-          Don’t have an account?{" "}
-          <span
-            onClick={() => navigate("/signup")}
-            className="text-green-600 cursor-pointer hover:underline"
-          >
-            Sign Up
-          </span>
-        </p>
+
+        <div className="text-center mt-6">
+          <p className="text-gray-500 text-sm">
+            Don’t have an account?{" "}
+            <span
+              onClick={() => navigate("/signup")}
+              className="text-green-600 font-medium cursor-pointer hover:underline"
+            >
+              Sign Up
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );

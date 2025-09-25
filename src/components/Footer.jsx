@@ -5,7 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-emerald-800 text-white pt-10 pb-6">
+    <footer className=" bg-[#3E482A] text-white pt-10 pb-6">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
           <h2 className="text-2xl font-bold mb-4">EcHub</h2>

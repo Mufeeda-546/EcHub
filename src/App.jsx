@@ -60,7 +60,8 @@ const App = () => {
           <Route path="orders" element={<OrderManagementPage />} />
         </Route>
       </Routes>
-      <ToastContainer />
+      <ToastContainer 
+      autoClose={1000}/>
     </Router>
   );
 };
